@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
 using System.Drawing;
 using System.IO;
 using System.Reflection;
@@ -12,9 +13,12 @@ namespace MusicApp
     {
         private List<string> songs = new List<string>();
         private List<bool> favoriteStatus = new List<bool>();
+        private List<string> videos = new List<string>();
+        private List<bool> videoFavoriteStatus = new List<bool>();
         private int currentSongIndex = -1;
         private WindowsMediaPlayer player;
         private Timer playbackTimer;
+        private string currentVideoPath;
 
         public Form1()
         {
@@ -28,7 +32,74 @@ namespace MusicApp
             trackBarVolume.Minimum = 0;
             trackBarVolume.Maximum = 100;
             trackBarVolume.Value = player.settings.volume;
+
+            Database.Initialize();
+            LoadSongsFromDatabase();
+            LoadVideosFromDatabase();
         }
+
+        private void LoadSongsFromDatabase()
+        {
+            songs.Clear();
+            favoriteStatus.Clear();
+
+            using (var conn = Database.GetConnection())
+            {
+                conn.Open();
+
+                string sql = "SELECT FilePath, IsFavorite FROM Songs";
+
+                using (var cmd = new SQLiteCommand(sql, conn))
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string path = reader.GetString(0);
+                        bool fav = reader.GetInt32(1) == 1;
+
+                        if (File.Exists(path))
+                        {
+                            songs.Add(path);
+                            favoriteStatus.Add(fav);
+                        }
+                    }
+                }
+            }
+
+            RefreshLibraryList();
+        }
+
+        private void LoadVideosFromDatabase()
+        {
+            videos.Clear();
+            videoFavoriteStatus.Clear();
+
+            using (var conn = Database.GetConnection())
+            {
+                conn.Open();
+
+                string sql = "SELECT FilePath, IsFavorite FROM Videos";
+
+                using (var cmd = new SQLiteCommand(sql, conn))
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string path = reader.GetString(0);
+                        bool fav = reader.GetInt32(1) == 1;
+
+                        if (File.Exists(path))
+                        {
+                            videos.Add(path);
+                            videoFavoriteStatus.Add(fav);
+                        }
+                    }
+                }
+            }
+
+            RefreshVideoLibraryList();
+        }
+
 
         private void RefreshLibraryList()
         {
@@ -175,8 +246,24 @@ namespace MusicApp
             if (e.Button == MouseButtons.Right && listViewLibrary.SelectedIndices.Count > 0)
             {
                 int index = listViewLibrary.SelectedIndices[0];
-                bool currentFav = favoriteStatus[index];
-                favoriteStatus[index] = !currentFav;
+
+                favoriteStatus[index] = !favoriteStatus[index];
+                bool isFav = favoriteStatus[index];
+
+                using (var conn = Database.GetConnection())
+                {
+                    conn.Open();
+
+                    string sql = "UPDATE Songs SET IsFavorite=@fav WHERE FilePath=@path";
+
+                    using (var cmd = new SQLiteCommand(sql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@fav", isFav ? 1 : 0);
+                        cmd.Parameters.AddWithValue("@path", songs[index]);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+
                 RefreshLibraryList();
             }
         }
@@ -187,16 +274,29 @@ namespace MusicApp
             openDialog.Filter = "Audio Files|*.mp3;*.wav";
             openDialog.Multiselect = true;
 
-            DialogResult result = openDialog.ShowDialog();
-
-            if (result == DialogResult.OK)
+            if (openDialog.ShowDialog() == DialogResult.OK)
             {
-                string[] files = openDialog.FileNames;
-
-                for (int i = 0; i < files.Length; i++)
+                using (var conn = Database.GetConnection())
                 {
-                    songs.Add(files[i]);
-                    favoriteStatus.Add(false);
+                    conn.Open();
+
+                    foreach (string file in openDialog.FileNames)
+                    {
+                        if (!songs.Contains(file))
+                        {
+                            songs.Add(file);
+                            favoriteStatus.Add(false);
+
+                            string sql =
+                                "INSERT OR IGNORE INTO Songs (FilePath, IsFavorite) VALUES (@path, 0)";
+
+                            using (var cmd = new SQLiteCommand(sql, conn))
+                            {
+                                cmd.Parameters.AddWithValue("@path", file);
+                                cmd.ExecuteNonQuery();
+                            }
+                        }
+                    }
                 }
 
                 RefreshLibraryList();
@@ -278,5 +378,260 @@ namespace MusicApp
         {
             player.settings.rate = 1.0;
         }
+
+        private void buttonAddVideo_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openDialog = new OpenFileDialog();
+            openDialog.Filter = "Video Files|*.mp4;*.avi;*.mkv;*.mov";
+            openDialog.Multiselect = true;
+
+            if (openDialog.ShowDialog() == DialogResult.OK)
+            {
+                using (var conn = Database.GetConnection())
+                {
+                    conn.Open();
+
+                    foreach (string file in openDialog.FileNames)
+                    {
+                        if (!videos.Contains(file))
+                        {
+                            videos.Add(file);
+                            videoFavoriteStatus.Add(false);
+
+                            string sql =
+                                "INSERT OR IGNORE INTO Videos (FilePath, IsFavorite) VALUES (@path, 0)";
+
+                            using (var cmd = new SQLiteCommand(sql, conn))
+                            {
+                                cmd.Parameters.AddWithValue("@path", file);
+                                cmd.ExecuteNonQuery();
+                            }
+                        }
+                    }
+                }
+
+                RefreshVideoLibraryList();
+            }
+        }
+
+        private void RefreshVideoLibraryList()
+        {
+            // Selecting filter ("All" or "Favorites")
+            string filter = "All";
+            if (comboBoxVideoFilter.SelectedItem != null)
+            {
+                filter = comboBoxVideoFilter.SelectedItem.ToString();
+            }
+
+            listViewVideoLibrary.Items.Clear();
+
+            for (int i = 0; i < videos.Count; i++)
+            {
+                bool isFavorite = videoFavoriteStatus[i];
+
+                if (filter == "Favorites" && !isFavorite)
+                    continue;
+
+                string filePath = videos[i];
+                ListViewItem item = new ListViewItem(filePath);
+
+                if (isFavorite)
+                    item.SubItems.Add("Liked");
+                else
+                    item.SubItems.Add("");
+
+                listViewVideoLibrary.Items.Add(item);
+            }
+        }
+
+        private async void listViewVideoLibrary_DoubleClick(object sender, EventArgs e)
+        {
+            if (listViewVideoLibrary.SelectedItems.Count == 0)
+                return;
+
+            currentVideoPath = listViewVideoLibrary.SelectedItems[0].Text;
+            MessageBox.Show($"{currentVideoPath}");
+
+            tabControlHome.SelectedTab = tabNowPlayingVideo;
+
+            await webViewVideo.EnsureCoreWebView2Async();
+
+            webViewVideo.Source = new Uri(currentVideoPath);
+        }
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            string query = textBoxSearch.Text.ToLower().Trim();
+
+            if (string.IsNullOrEmpty(query))
+            {
+                listBoxSearchResults.Visible = false;
+                listBoxSearchResults.Items.Clear();
+                return;
+            }
+
+            listBoxSearchResults.Items.Clear();
+            listBoxSearchResults.Visible = true;
+
+            for (int i = 0; i < songs.Count; i++)
+            {
+                string fileName = Path.GetFileNameWithoutExtension(songs[i]).ToLower();
+
+                if (fileName.Contains(query))
+                {
+                    listBoxSearchResults.Items.Add(new SearchResult
+                    {
+                        Index = i,
+                        Display = Path.GetFileNameWithoutExtension(songs[i])
+                    });
+                }
+            }
+        }
+
+        private void listBoxSearchResults_DoubleClick(object sender, EventArgs e)
+        {
+            if (listBoxSearchResults.SelectedItem is SearchResult result)
+            {
+                PlaySong(result.Index);
+                tabControlHome.SelectedTab = tabPlaySongs;
+
+                listBoxSearchResults.Visible = false;
+                textBoxSearch.Clear();
+            }
+        }
+
+        private void buttonNewPlaylist_Click(object sender, EventArgs e)
+        {
+            string name = Microsoft.VisualBasic.Interaction.InputBox(
+            "Enter playlist name:", "New Playlist");
+
+            if (string.IsNullOrWhiteSpace(name))
+                return;
+
+            using (var conn = Database.GetConnection())
+            {
+                conn.Open();
+                string sql = "INSERT OR IGNORE INTO Playlists (Name) VALUES (@name)";
+
+                using (var cmd = new SQLiteCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@name", name);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
+            LoadPlaylists();
+        }
+
+        private void LoadPlaylists()
+        {
+            listBoxPlaylists.Items.Clear();
+
+            // playlists already created
+            listBoxPlaylists.Items.Add("⭐ Favorites");
+            listBoxPlaylists.Items.Add("🕒 Recently Played");
+            listBoxPlaylists.Items.Add("🔥 Most Played");
+
+            using (var conn = Database.GetConnection())
+            {
+                conn.Open();
+                string sql = "SELECT Name FROM Playlists";
+
+                using (var cmd = new SQLiteCommand(sql, conn))
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        listBoxPlaylists.Items.Add(reader.GetString(0));
+                    }
+                }
+            }
+        }
+
+        private void listBoxPlaylists_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBoxPlaylists.SelectedItem == null) return;
+
+            string selected = listBoxPlaylists.SelectedItem.ToString();
+
+            if (selected.StartsWith("⭐"))
+            {
+                ShowFavoriteSongs();
+            }
+            else
+            {
+                ShowCustomPlaylist(selected);
+            }
+        }
+
+        private void ShowFavoriteSongs()
+        {
+            listViewPlaylistSongs.Items.Clear();
+
+            for (int i = 0; i < songs.Count; i++)
+            {
+                if (favoriteStatus[i])
+                {
+                    listViewPlaylistSongs.Items.Add(
+                        Path.GetFileNameWithoutExtension(songs[i]));
+                }
+            }
+        }
+
+        private void ShowCustomPlaylist(string playlistName)
+        {
+            listViewPlaylistSongs.Items.Clear();
+
+            using (var conn = Database.GetConnection())
+            {
+                conn.Open();
+
+                string sql = @"
+        SELECT SongPath FROM PlaylistSongs
+        WHERE PlaylistId = (
+            SELECT Id FROM Playlists WHERE Name = @name
+        )";
+
+                using (var cmd = new SQLiteCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@name", playlistName);
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string path = reader.GetString(0);
+                            listViewPlaylistSongs.Items.Add(
+                                Path.GetFileNameWithoutExtension(path));
+                        }
+                    }
+                }
+            }
+        }
+
+        private void AddSongToPlaylist(string songPath, string playlistName)
+        {
+            using (var conn = Database.GetConnection())
+            {
+                conn.Open();
+
+                string sql = @"
+        INSERT OR IGNORE INTO PlaylistSongs (PlaylistId, SongPath)
+        VALUES (
+            (SELECT Id FROM Playlists WHERE Name = @name),
+            @path
+        )";
+
+                using (var cmd = new SQLiteCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@name", playlistName);
+                    cmd.Parameters.AddWithValue("@path", songPath);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+
+
     }
 }

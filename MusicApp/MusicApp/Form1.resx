@@ -122,7 +122,7 @@
     <value>Segoe UI, 14pt, style=Bold</value>
   </data>
   <data name="labelWelcome.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 50</value>
+    <value>70, 75</value>
   </data>
   <data name="labelWelcome.Size" type="System.Drawing.Size, System.Drawing">
     <value>365, 50</value>
@@ -154,7 +154,7 @@
     <value />
   </data>
   <data name="pictureHomeCover.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 157</value>
+    <value>102, 182</value>
   </data>
   <data name="pictureHomeCover.Size" type="System.Drawing.Size, System.Drawing">
     <value>300, 300</value>
@@ -181,7 +181,7 @@
     <value>Segoe UI, 10pt</value>
   </data>
   <data name="labelSubtitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 100</value>
+    <value>102, 125</value>
   </data>
   <data name="labelSubtitle.Size" type="System.Drawing.Size, System.Drawing">
     <value>300, 30</value>
@@ -214,7 +214,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>438, 671</value>
+    <value>504, 671</value>
   </data>
   <data name="tabMain.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -234,11 +234,186 @@
   <data name="&gt;&gt;tabMain.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="listBoxSearchResults.ItemHeight" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="listBoxSearchResults.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 23</value>
+  </data>
+  <data name="listBoxSearchResults.Size" type="System.Drawing.Size, System.Drawing">
+    <value>488, 644</value>
+  </data>
+  <data name="listBoxSearchResults.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="listBoxSearchResults.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;listBoxSearchResults.Name" xml:space="preserve">
+    <value>listBoxSearchResults</value>
+  </data>
+  <data name="&gt;&gt;listBoxSearchResults.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listBoxSearchResults.Parent" xml:space="preserve">
+    <value>tabSearch</value>
+  </data>
+  <data name="&gt;&gt;listBoxSearchResults.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="textBoxSearch.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="textBoxSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="textBoxSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>504, 22</value>
+  </data>
+  <data name="textBoxSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;textBoxSearch.Name" xml:space="preserve">
+    <value>textBoxSearch</value>
+  </data>
+  <data name="&gt;&gt;textBoxSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxSearch.Parent" xml:space="preserve">
+    <value>tabSearch</value>
+  </data>
+  <data name="&gt;&gt;textBoxSearch.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="tabSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>504, 671</value>
+  </data>
+  <data name="tabSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="tabSearch.Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="&gt;&gt;tabSearch.Name" xml:space="preserve">
+    <value>tabSearch</value>
+  </data>
+  <data name="&gt;&gt;tabSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabSearch.Parent" xml:space="preserve">
+    <value>tabControlHome</value>
+  </data>
+  <data name="&gt;&gt;tabSearch.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="listViewPlaylistSongs.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="listViewPlaylistSongs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>252, 0</value>
+  </data>
+  <data name="listViewPlaylistSongs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>252, 671</value>
+  </data>
+  <data name="listViewPlaylistSongs.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;listViewPlaylistSongs.Name" xml:space="preserve">
+    <value>listViewPlaylistSongs</value>
+  </data>
+  <data name="&gt;&gt;listViewPlaylistSongs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listViewPlaylistSongs.Parent" xml:space="preserve">
+    <value>tabPlayLists</value>
+  </data>
+  <data name="&gt;&gt;listViewPlaylistSongs.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="buttonNewPlaylist.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 596</value>
+  </data>
+  <data name="buttonNewPlaylist.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 47</value>
+  </data>
+  <data name="buttonNewPlaylist.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="buttonNewPlaylist.Text" xml:space="preserve">
+    <value>New Playlist
+</value>
+  </data>
+  <data name="&gt;&gt;buttonNewPlaylist.Name" xml:space="preserve">
+    <value>buttonNewPlaylist</value>
+  </data>
+  <data name="&gt;&gt;buttonNewPlaylist.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonNewPlaylist.Parent" xml:space="preserve">
+    <value>tabPlayLists</value>
+  </data>
+  <data name="&gt;&gt;buttonNewPlaylist.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="listBoxPlaylists.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="listBoxPlaylists.ItemHeight" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="listBoxPlaylists.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="listBoxPlaylists.Size" type="System.Drawing.Size, System.Drawing">
+    <value>252, 671</value>
+  </data>
+  <data name="listBoxPlaylists.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;listBoxPlaylists.Name" xml:space="preserve">
+    <value>listBoxPlaylists</value>
+  </data>
+  <data name="&gt;&gt;listBoxPlaylists.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listBoxPlaylists.Parent" xml:space="preserve">
+    <value>tabPlayLists</value>
+  </data>
+  <data name="&gt;&gt;listBoxPlaylists.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tabPlayLists.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="tabPlayLists.Size" type="System.Drawing.Size, System.Drawing">
+    <value>504, 671</value>
+  </data>
+  <data name="tabPlayLists.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="tabPlayLists.Text" xml:space="preserve">
+    <value>Playlists</value>
+  </data>
+  <data name="&gt;&gt;tabPlayLists.Name" xml:space="preserve">
+    <value>tabPlayLists</value>
+  </data>
+  <data name="&gt;&gt;tabPlayLists.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPlayLists.Parent" xml:space="preserve">
+    <value>tabControlHome</value>
+  </data>
+  <data name="&gt;&gt;tabPlayLists.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 7.8pt</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>198, 562</value>
+    <value>253, 562</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 30</value>
@@ -277,7 +452,7 @@
     <value>250</value>
   </data>
   <data name="listViewLibrary.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 50</value>
+    <value>42, 17</value>
   </data>
   <data name="listViewLibrary.Size" type="System.Drawing.Size, System.Drawing">
     <value>420, 504</value>
@@ -298,7 +473,7 @@
     <value>1</value>
   </data>
   <data name="buttonAddSong.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 560</value>
+    <value>65, 560</value>
   </data>
   <data name="buttonAddSong.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 30</value>
@@ -328,7 +503,7 @@
     <value>Favorites</value>
   </data>
   <data name="comboBoxFilter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>265, 566</value>
+    <value>320, 566</value>
   </data>
   <data name="comboBoxFilter.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 24</value>
@@ -355,13 +530,13 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabLibrary.Size" type="System.Drawing.Size, System.Drawing">
-    <value>438, 671</value>
+    <value>504, 671</value>
   </data>
   <data name="tabLibrary.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="tabLibrary.Text" xml:space="preserve">
-    <value>Library</value>
+    <value>Music Library</value>
   </data>
   <data name="&gt;&gt;tabLibrary.Name" xml:space="preserve">
     <value>tabLibrary</value>
@@ -373,10 +548,13 @@
     <value>tabControlHome</value>
   </data>
   <data name="&gt;&gt;tabLibrary.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 423</value>
+    <value>77, 472</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>350, 30</value>
@@ -399,8 +577,11 @@
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 307</value>
+    <value>77, 356</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>350, 30</value>
@@ -423,8 +604,11 @@
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="labelSongTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="labelSongTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 270</value>
+    <value>77, 319</value>
   </data>
   <data name="labelSongTitle.Size" type="System.Drawing.Size, System.Drawing">
     <value>350, 30</value>
@@ -447,8 +631,11 @@
   <data name="&gt;&gt;labelSongTitle.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="trackBarProgress.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="trackBarProgress.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 340</value>
+    <value>77, 389</value>
   </data>
   <data name="trackBarProgress.Size" type="System.Drawing.Size, System.Drawing">
     <value>350, 56</value>
@@ -468,8 +655,11 @@
   <data name="&gt;&gt;trackBarProgress.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="trackBarVolume.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="trackBarVolume.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 456</value>
+    <value>77, 505</value>
   </data>
   <data name="trackBarVolume.Size" type="System.Drawing.Size, System.Drawing">
     <value>350, 56</value>
@@ -489,8 +679,11 @@
   <data name="&gt;&gt;trackBarVolume.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="buttonPlay.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="buttonPlay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>153, 544</value>
+    <value>186, 593</value>
   </data>
   <data name="buttonPlay.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 50</value>
@@ -513,8 +706,11 @@
   <data name="&gt;&gt;buttonPlay.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="buttonPause.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="buttonPause.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 544</value>
+    <value>246, 593</value>
   </data>
   <data name="buttonPause.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 50</value>
@@ -537,8 +733,11 @@
   <data name="&gt;&gt;buttonPause.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="buttonNext.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="buttonNext.Location" type="System.Drawing.Point, System.Drawing">
-    <value>273, 544</value>
+    <value>306, 593</value>
   </data>
   <data name="buttonNext.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 50</value>
@@ -561,8 +760,11 @@
   <data name="&gt;&gt;buttonNext.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="buttonPrev.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="buttonPrev.Location" type="System.Drawing.Point, System.Drawing">
-    <value>93, 544</value>
+    <value>126, 593</value>
   </data>
   <data name="buttonPrev.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 50</value>
@@ -586,10 +788,10 @@
     <value>8</value>
   </data>
   <data name="pictureBoxCover.Location" type="System.Drawing.Point, System.Drawing">
-    <value>109, 24</value>
+    <value>123, 25</value>
   </data>
   <data name="pictureBoxCover.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 220</value>
+    <value>250, 250</value>
   </data>
   <data name="pictureBoxCover.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -616,13 +818,13 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPlaySongs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>438, 671</value>
+    <value>504, 671</value>
   </data>
   <data name="tabPlaySongs.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="tabPlaySongs.Text" xml:space="preserve">
-    <value>Now Playing</value>
+    <value>Now Playing (Music)</value>
   </data>
   <data name="&gt;&gt;tabPlaySongs.Name" xml:space="preserve">
     <value>tabPlaySongs</value>
@@ -634,7 +836,193 @@
     <value>tabControlHome</value>
   </data>
   <data name="&gt;&gt;tabPlaySongs.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="buttonAddVideo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>62, 559</value>
+  </data>
+  <data name="buttonAddVideo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 30</value>
+  </data>
+  <data name="buttonAddVideo.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="buttonAddVideo.Text" xml:space="preserve">
+    <value>Add Video</value>
+  </data>
+  <data name="&gt;&gt;buttonAddVideo.Name" xml:space="preserve">
+    <value>buttonAddVideo</value>
+  </data>
+  <data name="&gt;&gt;buttonAddVideo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonAddVideo.Parent" xml:space="preserve">
+    <value>tabVideoLibrary</value>
+  </data>
+  <data name="&gt;&gt;buttonAddVideo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelVideoFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>250, 561</value>
+  </data>
+  <data name="labelVideoFilter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 30</value>
+  </data>
+  <data name="labelVideoFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="labelVideoFilter.Text" xml:space="preserve">
+    <value>Filter By:</value>
+  </data>
+  <data name="labelVideoFilter.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;labelVideoFilter.Name" xml:space="preserve">
+    <value>labelVideoFilter</value>
+  </data>
+  <data name="&gt;&gt;labelVideoFilter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelVideoFilter.Parent" xml:space="preserve">
+    <value>tabVideoLibrary</value>
+  </data>
+  <data name="&gt;&gt;labelVideoFilter.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="comboBoxVideoFilter.Items" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="comboBoxVideoFilter.Items1" xml:space="preserve">
+    <value>Favorites</value>
+  </data>
+  <data name="comboBoxVideoFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>317, 565</value>
+  </data>
+  <data name="comboBoxVideoFilter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 24</value>
+  </data>
+  <data name="comboBoxVideoFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;comboBoxVideoFilter.Name" xml:space="preserve">
+    <value>comboBoxVideoFilter</value>
+  </data>
+  <data name="&gt;&gt;comboBoxVideoFilter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxVideoFilter.Parent" xml:space="preserve">
+    <value>tabVideoLibrary</value>
+  </data>
+  <data name="&gt;&gt;comboBoxVideoFilter.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="columnHeader1.Text" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="columnHeader1.Width" type="System.Int32, mscorlib">
+    <value>250</value>
+  </data>
+  <data name="columnHeader2.Text" xml:space="preserve">
+    <value>Liked</value>
+  </data>
+  <data name="columnHeader2.Width" type="System.Int32, mscorlib">
+    <value>250</value>
+  </data>
+  <data name="listViewVideoLibrary.Location" type="System.Drawing.Point, System.Drawing">
+    <value>62, 32</value>
+  </data>
+  <data name="listViewVideoLibrary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>380, 500</value>
+  </data>
+  <data name="listViewVideoLibrary.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;listViewVideoLibrary.Name" xml:space="preserve">
+    <value>listViewVideoLibrary</value>
+  </data>
+  <data name="&gt;&gt;listViewVideoLibrary.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listViewVideoLibrary.Parent" xml:space="preserve">
+    <value>tabVideoLibrary</value>
+  </data>
+  <data name="&gt;&gt;listViewVideoLibrary.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tabVideoLibrary.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="tabVideoLibrary.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabVideoLibrary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>504, 671</value>
+  </data>
+  <data name="tabVideoLibrary.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tabVideoLibrary.Text" xml:space="preserve">
+    <value>Video Library</value>
+  </data>
+  <data name="&gt;&gt;tabVideoLibrary.Name" xml:space="preserve">
+    <value>tabVideoLibrary</value>
+  </data>
+  <data name="&gt;&gt;tabVideoLibrary.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabVideoLibrary.Parent" xml:space="preserve">
+    <value>tabControlHome</value>
+  </data>
+  <data name="&gt;&gt;tabVideoLibrary.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="webViewVideo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="webViewVideo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="webViewVideo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>504, 671</value>
+  </data>
+  <data name="webViewVideo.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;webViewVideo.Name" xml:space="preserve">
+    <value>webViewVideo</value>
+  </data>
+  <data name="&gt;&gt;webViewVideo.Type" xml:space="preserve">
+    <value>Microsoft.Web.WebView2.WinForms.WebView2, Microsoft.Web.WebView2.WinForms, Version=1.0.3650.58, Culture=neutral, PublicKeyToken=2a8ab48044d2601e</value>
+  </data>
+  <data name="&gt;&gt;webViewVideo.Parent" xml:space="preserve">
+    <value>tabNowPlayingVideo</value>
+  </data>
+  <data name="&gt;&gt;webViewVideo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabNowPlayingVideo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="tabNowPlayingVideo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>504, 671</value>
+  </data>
+  <data name="tabNowPlayingVideo.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="tabNowPlayingVideo.Text" xml:space="preserve">
+    <value>Now Playing (Video)</value>
+  </data>
+  <data name="&gt;&gt;tabNowPlayingVideo.Name" xml:space="preserve">
+    <value>tabNowPlayingVideo</value>
+  </data>
+  <data name="&gt;&gt;tabNowPlayingVideo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabNowPlayingVideo.Parent" xml:space="preserve">
+    <value>tabControlHome</value>
+  </data>
+  <data name="&gt;&gt;tabNowPlayingVideo.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="languageComboBox.Items" xml:space="preserve">
     <value>English</value>
@@ -751,7 +1139,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>438, 671</value>
+    <value>504, 671</value>
   </data>
   <data name="tabSettings.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -769,7 +1157,7 @@
     <value>tabControlHome</value>
   </data>
   <data name="&gt;&gt;tabSettings.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>7</value>
   </data>
   <data name="tabControlHome.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -778,7 +1166,7 @@
     <value>0, 0</value>
   </data>
   <data name="tabControlHome.Size" type="System.Drawing.Size, System.Drawing">
-    <value>446, 700</value>
+    <value>512, 700</value>
   </data>
   <data name="tabControlHome.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -802,7 +1190,10 @@
     <value>8, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>446, 700</value>
+    <value>512, 700</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Music Player</value>
@@ -817,6 +1208,18 @@
     <value>columnHeaderFavorite</value>
   </data>
   <data name="&gt;&gt;columnHeaderFavorite.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">
+    <value>columnHeader1</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader2.Name" xml:space="preserve">
+    <value>columnHeader2</value>
+  </data>
+  <data name="&gt;&gt;columnHeader2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

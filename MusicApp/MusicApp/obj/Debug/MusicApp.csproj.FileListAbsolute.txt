@@ -30,3 +30,15 @@ C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicA
 C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\obj\Debug\fr-CA\MusicApp.resources.dll
 C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\obj\Debug\MusicApp.exe
 C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\obj\Debug\MusicApp.pdb
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\bin\Debug\runtimes\win-x86\native\WebView2Loader.dll
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\bin\Debug\runtimes\win-x64\native\WebView2Loader.dll
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\bin\Debug\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\bin\Debug\Microsoft.Web.WebView2.Core.dll
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\bin\Debug\Microsoft.Web.WebView2.WinForms.dll
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\bin\Debug\Microsoft.Web.WebView2.Wpf.dll
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\bin\Debug\Microsoft.Web.WebView2.Core.xml
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\bin\Debug\Microsoft.Web.WebView2.WinForms.xml
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\bin\Debug\Microsoft.Web.WebView2.Wpf.xml
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\obj\Debug\MusicApp.csproj.Up2Date
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\bin\Debug\System.Data.SQLite.dll
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\bin\Debug\System.Data.SQLite.xml
