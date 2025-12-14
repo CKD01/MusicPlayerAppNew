@@ -1,0 +1,13 @@
+C:\Users\paulr\Desktop\MusicApp\MusicApp\bin\Debug\MusicApp.exe.config
+C:\Users\paulr\Desktop\MusicApp\MusicApp\bin\Debug\MusicApp.exe
+C:\Users\paulr\Desktop\MusicApp\MusicApp\bin\Debug\MusicApp.pdb
+C:\Users\paulr\Desktop\MusicApp\MusicApp\obj\Debug\MusicApp.csproj.AssemblyReference.cache
+C:\Users\paulr\Desktop\MusicApp\MusicApp\obj\Debug\MusicApp.Form1.resources
+C:\Users\paulr\Desktop\MusicApp\MusicApp\obj\Debug\MusicApp.Properties.Resources.resources
+C:\Users\paulr\Desktop\MusicApp\MusicApp\obj\Debug\MusicApp.csproj.GenerateResource.cache
+C:\Users\paulr\Desktop\MusicApp\MusicApp\obj\Debug\MusicApp.csproj.CoreCompileInputs.cache
+C:\Users\paulr\Desktop\MusicApp\MusicApp\obj\Debug\MusicApp.exe
+C:\Users\paulr\Desktop\MusicApp\MusicApp\obj\Debug\MusicApp.pdb
+C:\Users\paulr\Desktop\MusicApp\MusicApp\obj\Debug\MusicApp.exe.config
+C:\Users\paulr\Desktop\MusicApp\MusicApp\obj\Debug\Interop.WMPLib.dll
+C:\Users\paulr\Desktop\MusicApp\MusicApp\obj\Debug\MusicApp.csproj.ResolveComReference.cache
