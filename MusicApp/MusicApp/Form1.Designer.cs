@@ -222,6 +222,9 @@ namespace MusicApp
             resources.ApplyResources(this.buttonNext, "buttonNext");
             this.buttonNext.Name = "buttonNext";
             this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
+            this.buttonNext.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonNext_MouseDown);
+            this.buttonNext.MouseLeave += new System.EventHandler(this.buttonNext_MouseLeave);
+            this.buttonNext.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonNext_MouseUp);
             // 
             // buttonPrev
             // 

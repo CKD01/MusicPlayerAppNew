@@ -263,5 +263,20 @@ namespace MusicApp
                     break;
             }
         }
+
+        private void buttonNext_MouseDown(object sender, MouseEventArgs e)
+        {
+            player.settings.rate = 1.4;
+        }
+
+        private void buttonNext_MouseUp(object sender, MouseEventArgs e)
+        {
+            player.settings.rate = 1.0;
+        }
+
+        private void buttonNext_MouseLeave(object sender, EventArgs e)
+        {
+            player.settings.rate = 1.0;
+        }
     }
 }
