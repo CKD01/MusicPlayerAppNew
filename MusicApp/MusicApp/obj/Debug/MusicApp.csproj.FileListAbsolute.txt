@@ -11,3 +11,22 @@ C:\Users\paulr\Desktop\MusicApp\MusicApp\obj\Debug\MusicApp.pdb
 C:\Users\paulr\Desktop\MusicApp\MusicApp\obj\Debug\MusicApp.exe.config
 C:\Users\paulr\Desktop\MusicApp\MusicApp\obj\Debug\Interop.WMPLib.dll
 C:\Users\paulr\Desktop\MusicApp\MusicApp\obj\Debug\MusicApp.csproj.ResolveComReference.cache
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\bin\Debug\MusicApp.exe.config
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\bin\Debug\MusicApp.exe
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\bin\Debug\MusicApp.pdb
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\bin\Debug\es\MusicApp.resources.dll
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\bin\Debug\fr-CA\MusicApp.resources.dll
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\obj\Debug\MusicApp.csproj.AssemblyReference.cache
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\obj\Debug\MusicApp.exe.config
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\obj\Debug\Interop.WMPLib.dll
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\obj\Debug\MusicApp.csproj.ResolveComReference.cache
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\obj\Debug\MusicApp.Form1.resources
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\obj\Debug\MusicApp.Properties.Resources.resources
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\obj\Debug\MusicApp.Form1.es.resources
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\obj\Debug\MusicApp.Form1.fr-CA.resources
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\obj\Debug\MusicApp.csproj.GenerateResource.cache
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\obj\Debug\MusicApp.csproj.CoreCompileInputs.cache
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\obj\Debug\es\MusicApp.resources.dll
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\obj\Debug\fr-CA\MusicApp.resources.dll
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\obj\Debug\MusicApp.exe
+C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\obj\Debug\MusicApp.pdb

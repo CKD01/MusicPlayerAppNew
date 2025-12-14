@@ -27,12 +27,14 @@ namespace MusicApp
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControlHome = new System.Windows.Forms.TabControl();
             this.tabMain = new System.Windows.Forms.TabPage();
             this.labelWelcome = new System.Windows.Forms.Label();
             this.pictureHomeCover = new System.Windows.Forms.PictureBox();
             this.labelSubtitle = new System.Windows.Forms.Label();
             this.tabLibrary = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
             this.listViewLibrary = new System.Windows.Forms.ListView();
             this.columnHeaderSong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderFavorite = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -41,7 +43,6 @@ namespace MusicApp
             this.tabPlaySongs = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBoxCover = new System.Windows.Forms.PictureBox();
             this.labelSongTitle = new System.Windows.Forms.Label();
             this.trackBarProgress = new System.Windows.Forms.TrackBar();
             this.trackBarVolume = new System.Windows.Forms.TrackBar();
@@ -49,18 +50,20 @@ namespace MusicApp
             this.buttonPause = new System.Windows.Forms.Button();
             this.buttonNext = new System.Windows.Forms.Button();
             this.buttonPrev = new System.Windows.Forms.Button();
+            this.pictureBoxCover = new System.Windows.Forms.PictureBox();
             this.tabSettings = new System.Windows.Forms.TabPage();
+            this.languageComboBox = new System.Windows.Forms.ComboBox();
+            this.languageLabel = new System.Windows.Forms.Label();
             this.labelTheme = new System.Windows.Forms.Label();
             this.comboBoxTheme = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.tabControlHome.SuspendLayout();
             this.tabMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureHomeCover)).BeginInit();
             this.tabLibrary.SuspendLayout();
             this.tabPlaySongs.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCover)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarProgress)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarVolume)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCover)).BeginInit();
             this.tabSettings.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,56 +73,35 @@ namespace MusicApp
             this.tabControlHome.Controls.Add(this.tabLibrary);
             this.tabControlHome.Controls.Add(this.tabPlaySongs);
             this.tabControlHome.Controls.Add(this.tabSettings);
-            this.tabControlHome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlHome.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.tabControlHome, "tabControlHome");
             this.tabControlHome.Name = "tabControlHome";
             this.tabControlHome.SelectedIndex = 0;
-            this.tabControlHome.Size = new System.Drawing.Size(401, 700);
-            this.tabControlHome.TabIndex = 0;
             // 
             // tabMain
             // 
             this.tabMain.Controls.Add(this.labelWelcome);
             this.tabMain.Controls.Add(this.pictureHomeCover);
             this.tabMain.Controls.Add(this.labelSubtitle);
-            this.tabMain.Location = new System.Drawing.Point(4, 25);
+            resources.ApplyResources(this.tabMain, "tabMain");
             this.tabMain.Name = "tabMain";
-            this.tabMain.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMain.Size = new System.Drawing.Size(393, 671);
-            this.tabMain.TabIndex = 0;
-            this.tabMain.Text = "Home";
             this.tabMain.UseVisualStyleBackColor = true;
             // 
             // labelWelcome
             // 
-            this.labelWelcome.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.labelWelcome.Location = new System.Drawing.Point(50, 50);
+            resources.ApplyResources(this.labelWelcome, "labelWelcome");
             this.labelWelcome.Name = "labelWelcome";
-            this.labelWelcome.Size = new System.Drawing.Size(300, 50);
-            this.labelWelcome.TabIndex = 0;
-            this.labelWelcome.Text = "Welcome to My Music Player!";
-            this.labelWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureHomeCover
             // 
             this.pictureHomeCover.Image = global::MusicApp.Properties.Resources.musical_note;
-            this.pictureHomeCover.InitialImage = null;
-            this.pictureHomeCover.Location = new System.Drawing.Point(50, 156);
+            resources.ApplyResources(this.pictureHomeCover, "pictureHomeCover");
             this.pictureHomeCover.Name = "pictureHomeCover";
-            this.pictureHomeCover.Size = new System.Drawing.Size(300, 300);
-            this.pictureHomeCover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureHomeCover.TabIndex = 1;
             this.pictureHomeCover.TabStop = false;
             // 
             // labelSubtitle
             // 
-            this.labelSubtitle.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.labelSubtitle.Location = new System.Drawing.Point(50, 100);
+            resources.ApplyResources(this.labelSubtitle, "labelSubtitle");
             this.labelSubtitle.Name = "labelSubtitle";
-            this.labelSubtitle.Size = new System.Drawing.Size(300, 30);
-            this.labelSubtitle.TabIndex = 2;
-            this.labelSubtitle.Text = "Enjoy your music collection";
-            this.labelSubtitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabLibrary
             // 
@@ -127,13 +109,14 @@ namespace MusicApp
             this.tabLibrary.Controls.Add(this.listViewLibrary);
             this.tabLibrary.Controls.Add(this.buttonAddSong);
             this.tabLibrary.Controls.Add(this.comboBoxFilter);
-            this.tabLibrary.Location = new System.Drawing.Point(4, 25);
+            resources.ApplyResources(this.tabLibrary, "tabLibrary");
             this.tabLibrary.Name = "tabLibrary";
-            this.tabLibrary.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLibrary.Size = new System.Drawing.Size(393, 671);
-            this.tabLibrary.TabIndex = 1;
-            this.tabLibrary.Text = "Library";
             this.tabLibrary.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
             // 
             // listViewLibrary
             // 
@@ -143,10 +126,8 @@ namespace MusicApp
             this.listViewLibrary.FullRowSelect = true;
             this.listViewLibrary.GridLines = true;
             this.listViewLibrary.HideSelection = false;
-            this.listViewLibrary.Location = new System.Drawing.Point(10, 50);
+            resources.ApplyResources(this.listViewLibrary, "listViewLibrary");
             this.listViewLibrary.Name = "listViewLibrary";
-            this.listViewLibrary.Size = new System.Drawing.Size(380, 500);
-            this.listViewLibrary.TabIndex = 0;
             this.listViewLibrary.UseCompatibleStateImageBehavior = false;
             this.listViewLibrary.View = System.Windows.Forms.View.Details;
             this.listViewLibrary.DoubleClick += new System.EventHandler(this.ListViewLibrary_DoubleClick);
@@ -154,21 +135,16 @@ namespace MusicApp
             // 
             // columnHeaderSong
             // 
-            this.columnHeaderSong.Text = "Song";
-            this.columnHeaderSong.Width = 250;
+            resources.ApplyResources(this.columnHeaderSong, "columnHeaderSong");
             // 
             // columnHeaderFavorite
             // 
-            this.columnHeaderFavorite.Text = "Liked";
-            this.columnHeaderFavorite.Width = 250;
+            resources.ApplyResources(this.columnHeaderFavorite, "columnHeaderFavorite");
             // 
             // buttonAddSong
             // 
-            this.buttonAddSong.Location = new System.Drawing.Point(10, 560);
+            resources.ApplyResources(this.buttonAddSong, "buttonAddSong");
             this.buttonAddSong.Name = "buttonAddSong";
-            this.buttonAddSong.Size = new System.Drawing.Size(120, 30);
-            this.buttonAddSong.TabIndex = 1;
-            this.buttonAddSong.Text = "Add Song";
             this.buttonAddSong.UseVisualStyleBackColor = true;
             this.buttonAddSong.Click += new System.EventHandler(this.ButtonAddSong_Click);
             // 
@@ -176,19 +152,16 @@ namespace MusicApp
             // 
             this.comboBoxFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxFilter.Items.AddRange(new object[] {
-            "All",
-            "Favorites"});
-            this.comboBoxFilter.Location = new System.Drawing.Point(265, 566);
+            resources.GetString("comboBoxFilter.Items"),
+            resources.GetString("comboBoxFilter.Items1")});
+            resources.ApplyResources(this.comboBoxFilter, "comboBoxFilter");
             this.comboBoxFilter.Name = "comboBoxFilter";
-            this.comboBoxFilter.Size = new System.Drawing.Size(120, 24);
-            this.comboBoxFilter.TabIndex = 2;
             this.comboBoxFilter.SelectedIndexChanged += new System.EventHandler(this.ComboBoxFilter_SelectedIndexChanged);
             // 
             // tabPlaySongs
             // 
             this.tabPlaySongs.Controls.Add(this.label2);
             this.tabPlaySongs.Controls.Add(this.label1);
-            this.tabPlaySongs.Controls.Add(this.pictureBoxCover);
             this.tabPlaySongs.Controls.Add(this.labelSongTitle);
             this.tabPlaySongs.Controls.Add(this.trackBarProgress);
             this.tabPlaySongs.Controls.Add(this.trackBarVolume);
@@ -196,164 +169,131 @@ namespace MusicApp
             this.tabPlaySongs.Controls.Add(this.buttonPause);
             this.tabPlaySongs.Controls.Add(this.buttonNext);
             this.tabPlaySongs.Controls.Add(this.buttonPrev);
-            this.tabPlaySongs.Location = new System.Drawing.Point(4, 25);
+            this.tabPlaySongs.Controls.Add(this.pictureBoxCover);
+            resources.ApplyResources(this.tabPlaySongs, "tabPlaySongs");
             this.tabPlaySongs.Name = "tabPlaySongs";
-            this.tabPlaySongs.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPlaySongs.Size = new System.Drawing.Size(393, 671);
-            this.tabPlaySongs.TabIndex = 2;
-            this.tabPlaySongs.Text = "Now Playing";
             this.tabPlaySongs.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(20, 423);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(350, 30);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Volume";
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(20, 307);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(350, 30);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Time";
-            // 
-            // pictureBoxCover
-            // 
-            this.pictureBoxCover.Image = global::MusicApp.Properties.Resources.sound_waves;
-            this.pictureBoxCover.Location = new System.Drawing.Point(96, 50);
-            this.pictureBoxCover.Name = "pictureBoxCover";
-            this.pictureBoxCover.Size = new System.Drawing.Size(200, 200);
-            this.pictureBoxCover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxCover.TabIndex = 0;
-            this.pictureBoxCover.TabStop = false;
             // 
             // labelSongTitle
             // 
-            this.labelSongTitle.Location = new System.Drawing.Point(20, 270);
+            resources.ApplyResources(this.labelSongTitle, "labelSongTitle");
             this.labelSongTitle.Name = "labelSongTitle";
-            this.labelSongTitle.Size = new System.Drawing.Size(350, 30);
-            this.labelSongTitle.TabIndex = 1;
-            this.labelSongTitle.Text = "Song Title";
             // 
             // trackBarProgress
             // 
-            this.trackBarProgress.Location = new System.Drawing.Point(20, 340);
+            resources.ApplyResources(this.trackBarProgress, "trackBarProgress");
             this.trackBarProgress.Maximum = 100;
             this.trackBarProgress.Name = "trackBarProgress";
-            this.trackBarProgress.Size = new System.Drawing.Size(350, 56);
-            this.trackBarProgress.TabIndex = 4;
             this.trackBarProgress.Tag = "";
             this.trackBarProgress.Scroll += new System.EventHandler(this.TrackBarProgress_Scroll);
             // 
             // trackBarVolume
             // 
-            this.trackBarVolume.Location = new System.Drawing.Point(20, 456);
+            resources.ApplyResources(this.trackBarVolume, "trackBarVolume");
             this.trackBarVolume.Maximum = 100;
             this.trackBarVolume.Name = "trackBarVolume";
-            this.trackBarVolume.Size = new System.Drawing.Size(350, 56);
-            this.trackBarVolume.TabIndex = 5;
             this.trackBarVolume.Value = 50;
             this.trackBarVolume.Scroll += new System.EventHandler(this.TrackBarVolume_Scroll);
             // 
             // buttonPlay
             // 
-            this.buttonPlay.Location = new System.Drawing.Point(129, 544);
+            resources.ApplyResources(this.buttonPlay, "buttonPlay");
             this.buttonPlay.Name = "buttonPlay";
-            this.buttonPlay.Size = new System.Drawing.Size(50, 50);
-            this.buttonPlay.TabIndex = 6;
-            this.buttonPlay.Text = ">";
             this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
             // 
             // buttonPause
             // 
-            this.buttonPause.Location = new System.Drawing.Point(189, 544);
+            resources.ApplyResources(this.buttonPause, "buttonPause");
             this.buttonPause.Name = "buttonPause";
-            this.buttonPause.Size = new System.Drawing.Size(50, 50);
-            this.buttonPause.TabIndex = 7;
-            this.buttonPause.Text = "||";
             this.buttonPause.Click += new System.EventHandler(this.buttonPause_Click);
             // 
             // buttonNext
             // 
-            this.buttonNext.Location = new System.Drawing.Point(249, 544);
+            resources.ApplyResources(this.buttonNext, "buttonNext");
             this.buttonNext.Name = "buttonNext";
-            this.buttonNext.Size = new System.Drawing.Size(50, 50);
-            this.buttonNext.TabIndex = 8;
-            this.buttonNext.Text = ">>";
             this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
             // 
             // buttonPrev
             // 
-            this.buttonPrev.Location = new System.Drawing.Point(69, 544);
+            resources.ApplyResources(this.buttonPrev, "buttonPrev");
             this.buttonPrev.Name = "buttonPrev";
-            this.buttonPrev.Size = new System.Drawing.Size(50, 50);
-            this.buttonPrev.TabIndex = 9;
-            this.buttonPrev.Text = "<<";
             this.buttonPrev.Click += new System.EventHandler(this.buttonPrev_Click);
+            // 
+            // pictureBoxCover
+            // 
+            this.pictureBoxCover.Image = global::MusicApp.Properties.Resources.sound_waves;
+            resources.ApplyResources(this.pictureBoxCover, "pictureBoxCover");
+            this.pictureBoxCover.Name = "pictureBoxCover";
+            this.pictureBoxCover.TabStop = false;
             // 
             // tabSettings
             // 
+            this.tabSettings.Controls.Add(this.languageComboBox);
+            this.tabSettings.Controls.Add(this.languageLabel);
             this.tabSettings.Controls.Add(this.labelTheme);
             this.tabSettings.Controls.Add(this.comboBoxTheme);
-            this.tabSettings.Location = new System.Drawing.Point(4, 25);
+            resources.ApplyResources(this.tabSettings, "tabSettings");
             this.tabSettings.Name = "tabSettings";
-            this.tabSettings.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSettings.Size = new System.Drawing.Size(393, 671);
-            this.tabSettings.TabIndex = 3;
-            this.tabSettings.Text = "Settings";
             this.tabSettings.UseVisualStyleBackColor = true;
+            // 
+            // languageComboBox
+            // 
+            this.languageComboBox.FormattingEnabled = true;
+            this.languageComboBox.Items.AddRange(new object[] {
+            resources.GetString("languageComboBox.Items"),
+            resources.GetString("languageComboBox.Items1"),
+            resources.GetString("languageComboBox.Items2")});
+            resources.ApplyResources(this.languageComboBox, "languageComboBox");
+            this.languageComboBox.Name = "languageComboBox";
+            this.languageComboBox.SelectedIndexChanged += new System.EventHandler(this.languageComboBox_SelectedIndexChanged);
+            // 
+            // languageLabel
+            // 
+            resources.ApplyResources(this.languageLabel, "languageLabel");
+            this.languageLabel.Name = "languageLabel";
             // 
             // labelTheme
             // 
-            this.labelTheme.Location = new System.Drawing.Point(20, 50);
+            resources.ApplyResources(this.labelTheme, "labelTheme");
             this.labelTheme.Name = "labelTheme";
-            this.labelTheme.Size = new System.Drawing.Size(100, 25);
-            this.labelTheme.TabIndex = 0;
-            this.labelTheme.Text = "Theme:";
             // 
             // comboBoxTheme
             // 
             this.comboBoxTheme.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTheme.Items.AddRange(new object[] {
-            "Light",
-            "Dark"});
-            this.comboBoxTheme.Location = new System.Drawing.Point(130, 50);
+            resources.GetString("comboBoxTheme.Items"),
+            resources.GetString("comboBoxTheme.Items1")});
+            resources.ApplyResources(this.comboBoxTheme, "comboBoxTheme");
             this.comboBoxTheme.Name = "comboBoxTheme";
-            this.comboBoxTheme.Size = new System.Drawing.Size(150, 24);
-            this.comboBoxTheme.TabIndex = 1;
             this.comboBoxTheme.SelectedIndexChanged += new System.EventHandler(this.ComboBoxTheme_SelectedIndexChanged);
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(198, 562);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 30);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Filter By:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(401, 700);
             this.Controls.Add(this.tabControlHome);
             this.Name = "Form1";
-            this.Text = "Music Player";
             this.tabControlHome.ResumeLayout(false);
             this.tabMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureHomeCover)).EndInit();
             this.tabLibrary.ResumeLayout(false);
             this.tabPlaySongs.ResumeLayout(false);
             this.tabPlaySongs.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCover)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarProgress)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarVolume)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCover)).EndInit();
             this.tabSettings.ResumeLayout(false);
+            this.tabSettings.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -394,6 +334,8 @@ namespace MusicApp
         private Label label1;
         private Label label2;
         private Label label3;
+        private ComboBox languageComboBox;
+        private Label languageLabel;
     }
 }
 
