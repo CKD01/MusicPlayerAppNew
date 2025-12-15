@@ -29,11 +29,15 @@ namespace MusicApp
                 conn.Open();
 
                 string sql = @"
+
                 CREATE TABLE IF NOT EXISTS Songs (
-                    Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    FilePath TEXT UNIQUE NOT NULL,
-                    IsFavorite INTEGER NOT NULL DEFAULT 0
+                Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                FilePath TEXT UNIQUE NOT NULL,
+                IsFavorite INTEGER NOT NULL DEFAULT 0,
+                PlayCount INTEGER NOT NULL DEFAULT 0,
+                LastPlayed TEXT
                 );
+
 
                 CREATE TABLE IF NOT EXISTS Videos (
                     Id INTEGER PRIMARY KEY AUTOINCREMENT,

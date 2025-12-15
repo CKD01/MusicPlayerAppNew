@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Credo Dotse\\OneDrive\\Documents\\GitHub\\MusicPlayerAppNew\\MusicApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{786C00B0-63DA-4A2F-A08C-87752F1897B1}|MusicApp\\MusicApp.csproj|c:\\users\\credo dotse\\onedrive\\documents\\github\\musicplayerappnew\\musicapp\\musicapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{786C00B0-63DA-4A2F-A08C-87752F1897B1}|MusicApp\\MusicApp.csproj|C:\\Users\\Credo Dotse\\OneDrive\\Documents\\GitHub\\MusicPlayerAppNew\\MusicApp\\musicapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{786C00B0-63DA-4A2F-A08C-87752F1897B1}|MusicApp\\MusicApp.csproj|solutionrelative:musicapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{786C00B0-63DA-4A2F-A08C-87752F1897B1}|MusicApp\\MusicApp.csproj|c:\\users\\credo dotse\\onedrive\\documents\\github\\musicplayerappnew\\musicapp\\musicapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{786C00B0-63DA-4A2F-A08C-87752F1897B1}|MusicApp\\MusicApp.csproj|solutionrelative:musicapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{786C00B0-63DA-4A2F-A08C-87752F1897B1}|MusicApp\\MusicApp.csproj|C:\\Users\\Credo Dotse\\OneDrive\\Documents\\GitHub\\MusicPlayerAppNew\\MusicApp\\musicapp\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{786C00B0-63DA-4A2F-A08C-87752F1897B1}|MusicApp\\MusicApp.csproj|solutionrelative:musicapp\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{786C00B0-63DA-4A2F-A08C-87752F1897B1}|MusicApp\\MusicApp.csproj|C:\\Users\\Credo Dotse\\OneDrive\\Documents\\GitHub\\MusicPlayerAppNew\\MusicApp\\musicapp\\searchresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{786C00B0-63DA-4A2F-A08C-87752F1897B1}|MusicApp\\MusicApp.csproj|solutionrelative:musicapp\\searchresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{786C00B0-63DA-4A2F-A08C-87752F1897B1}|MusicApp\\MusicApp.csproj|C:\\Users\\Credo Dotse\\OneDrive\\Documents\\GitHub\\MusicPlayerAppNew\\MusicApp\\musicapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{786C00B0-63DA-4A2F-A08C-87752F1897B1}|MusicApp\\MusicApp.csproj|solutionrelative:musicapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{786C00B0-63DA-4A2F-A08C-87752F1897B1}|MusicApp\\MusicApp.csproj|C:\\Users\\Credo Dotse\\OneDrive\\Documents\\GitHub\\MusicPlayerAppNew\\MusicApp\\musicapp\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{786C00B0-63DA-4A2F-A08C-87752F1897B1}|MusicApp\\MusicApp.csproj|solutionrelative:musicapp\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{786C00B0-63DA-4A2F-A08C-87752F1897B1}|MusicApp\\MusicApp.csproj|C:\\Users\\Credo Dotse\\OneDrive\\Documents\\GitHub\\MusicPlayerAppNew\\MusicApp\\musicapp\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{786C00B0-63DA-4A2F-A08C-87752F1897B1}|MusicApp\\MusicApp.csproj|solutionrelative:musicapp\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{786C00B0-63DA-4A2F-A08C-87752F1897B1}|MusicApp\\MusicApp.csproj|C:\\Users\\Credo Dotse\\OneDrive\\Documents\\GitHub\\MusicPlayerAppNew\\MusicApp\\musicapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,8 +27,12 @@
       "RelativeMoniker": "D:0:0:{786C00B0-63DA-4A2F-A08C-87752F1897B1}|MusicApp\\MusicApp.csproj|solutionrelative:musicapp\\changelanguage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{786C00B0-63DA-4A2F-A08C-87752F1897B1}|MusicApp\\MusicApp.csproj|C:\\Users\\Credo Dotse\\OneDrive\\Documents\\GitHub\\MusicPlayerAppNew\\MusicApp\\musicapp\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{786C00B0-63DA-4A2F-A08C-87752F1897B1}|MusicApp\\MusicApp.csproj|solutionrelative:musicapp\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{786C00B0-63DA-4A2F-A08C-87752F1897B1}|MusicApp\\MusicApp.csproj|C:\\Users\\Credo Dotse\\OneDrive\\Documents\\GitHub\\MusicPlayerAppNew\\MusicApp\\musicapp\\searchresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{786C00B0-63DA-4A2F-A08C-87752F1897B1}|MusicApp\\MusicApp.csproj|solutionrelative:musicapp\\searchresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{786C00B0-63DA-4A2F-A08C-87752F1897B1}|MusicApp\\MusicApp.csproj|C:\\Users\\Credo Dotse\\OneDrive\\Documents\\GitHub\\MusicPlayerAppNew\\MusicApp\\musicapp\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{786C00B0-63DA-4A2F-A08C-87752F1897B1}|MusicApp\\MusicApp.csproj|solutionrelative:musicapp\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,21 +42,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Credo Dotse\\OneDrive\\Documents\\GitHub\\MusicPlayerAppNew\\MusicApp\\MusicApp\\Form1.cs",
-              "RelativeDocumentMoniker": "MusicApp\\Form1.cs",
-              "ToolTip": "C:\\Users\\Credo Dotse\\OneDrive\\Documents\\GitHub\\MusicPlayerAppNew\\MusicApp\\MusicApp\\Form1.cs",
-              "RelativeToolTip": "MusicApp\\Form1.cs",
-              "ViewState": "AgIAANkBAAAAAAAAAAAowPMBAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T00:13:13.264Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -71,31 +58,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "App.config",
-              "DocumentMoniker": "C:\\Users\\Credo Dotse\\OneDrive\\Documents\\GitHub\\MusicPlayerAppNew\\MusicApp\\MusicApp\\App.config",
-              "RelativeDocumentMoniker": "MusicApp\\App.config",
-              "ToolTip": "C:\\Users\\Credo Dotse\\OneDrive\\Documents\\GitHub\\MusicPlayerAppNew\\MusicApp\\MusicApp\\App.config",
-              "RelativeToolTip": "MusicApp\\App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-12-14T18:07:29.707Z"
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Credo Dotse\\OneDrive\\Documents\\GitHub\\MusicPlayerAppNew\\MusicApp\\MusicApp\\Form1.cs",
+              "RelativeDocumentMoniker": "MusicApp\\Form1.cs",
+              "ToolTip": "C:\\Users\\Credo Dotse\\OneDrive\\Documents\\GitHub\\MusicPlayerAppNew\\MusicApp\\MusicApp\\Form1.cs",
+              "RelativeToolTip": "MusicApp\\Form1.cs",
+              "ViewState": "AgIAAKoDAAAAAAAAAAAswMMDAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T00:13:13.264Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Credo Dotse\\OneDrive\\Documents\\GitHub\\MusicPlayerAppNew\\MusicApp\\MusicApp\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "MusicApp\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\Credo Dotse\\OneDrive\\Documents\\GitHub\\MusicPlayerAppNew\\MusicApp\\MusicApp\\Form1.Designer.cs",
+              "RelativeToolTip": "MusicApp\\Form1.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T00:12:22.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Database.cs",
               "DocumentMoniker": "C:\\Users\\Credo Dotse\\OneDrive\\Documents\\GitHub\\MusicPlayerAppNew\\MusicApp\\MusicApp\\Database.cs",
               "RelativeDocumentMoniker": "MusicApp\\Database.cs",
               "ToolTip": "C:\\Users\\Credo Dotse\\OneDrive\\Documents\\GitHub\\MusicPlayerAppNew\\MusicApp\\MusicApp\\Database.cs",
               "RelativeToolTip": "MusicApp\\Database.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACsAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACoAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T20:41:24.058Z"
+              "WhenOpened": "2025-12-14T20:41:24.058Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\Credo Dotse\\OneDrive\\Documents\\GitHub\\MusicPlayerAppNew\\MusicApp\\MusicApp\\App.config",
+              "RelativeDocumentMoniker": "MusicApp\\App.config",
+              "ToolTip": "C:\\Users\\Credo Dotse\\OneDrive\\Documents\\GitHub\\MusicPlayerAppNew\\MusicApp\\MusicApp\\App.config",
+              "RelativeToolTip": "MusicApp\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-12-14T18:07:29.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "SearchResult.cs",
               "DocumentMoniker": "C:\\Users\\Credo Dotse\\OneDrive\\Documents\\GitHub\\MusicPlayerAppNew\\MusicApp\\MusicApp\\SearchResult.cs",
               "RelativeDocumentMoniker": "MusicApp\\SearchResult.cs",
@@ -107,7 +122,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "ChangeLanguage.cs",
               "DocumentMoniker": "C:\\Users\\Credo Dotse\\OneDrive\\Documents\\GitHub\\MusicPlayerAppNew\\MusicApp\\MusicApp\\ChangeLanguage.cs",
               "RelativeDocumentMoniker": "MusicApp\\ChangeLanguage.cs",
@@ -119,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Credo Dotse\\OneDrive\\Documents\\GitHub\\MusicPlayerAppNew\\MusicApp\\MusicApp\\Program.cs",
               "RelativeDocumentMoniker": "MusicApp\\Program.cs",
@@ -128,18 +143,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-14T18:11:46.243Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Credo Dotse\\OneDrive\\Documents\\GitHub\\MusicPlayerAppNew\\MusicApp\\MusicApp\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "MusicApp\\Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\Credo Dotse\\OneDrive\\Documents\\GitHub\\MusicPlayerAppNew\\MusicApp\\MusicApp\\Form1.Designer.cs*",
-              "RelativeToolTip": "MusicApp\\Form1.Designer.cs*",
-              "ViewState": "AgIAAC0BAAAAAAAAAAAQwFUBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T00:12:22.592Z"
             }
           ]
         }

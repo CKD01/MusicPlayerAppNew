@@ -359,7 +359,7 @@
     <value>1</value>
   </data>
   <data name="listBoxPlaylists.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
+    <value>Fill</value>
   </data>
   <data name="listBoxPlaylists.ItemHeight" type="System.Int32, mscorlib">
     <value>16</value>
@@ -368,7 +368,7 @@
     <value>0, 0</value>
   </data>
   <data name="listBoxPlaylists.Size" type="System.Drawing.Size, System.Drawing">
-    <value>252, 671</value>
+    <value>504, 671</value>
   </data>
   <data name="listBoxPlaylists.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -409,6 +409,57 @@
   <data name="&gt;&gt;tabPlayLists.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="removeSongButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="removeSongButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>65, 599</value>
+  </data>
+  <data name="removeSongButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 30</value>
+  </data>
+  <data name="removeSongButton.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="removeSongButton.Text" xml:space="preserve">
+    <value>Remove song</value>
+  </data>
+  <data name="&gt;&gt;removeSongButton.Name" xml:space="preserve">
+    <value>removeSongButton</value>
+  </data>
+  <data name="&gt;&gt;removeSongButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;removeSongButton.Parent" xml:space="preserve">
+    <value>tabLibrary</value>
+  </data>
+  <data name="&gt;&gt;removeSongButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="addToPlayListButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>65, 635</value>
+  </data>
+  <data name="addToPlayListButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 28</value>
+  </data>
+  <data name="addToPlayListButton.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="addToPlayListButton.Text" xml:space="preserve">
+    <value>Add to playlist</value>
+  </data>
+  <data name="&gt;&gt;addToPlayListButton.Name" xml:space="preserve">
+    <value>addToPlayListButton</value>
+  </data>
+  <data name="&gt;&gt;addToPlayListButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;addToPlayListButton.Parent" xml:space="preserve">
+    <value>tabLibrary</value>
+  </data>
+  <data name="&gt;&gt;addToPlayListButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 7.8pt</value>
   </data>
@@ -437,7 +488,7 @@
     <value>tabLibrary</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="columnHeaderSong.Text" xml:space="preserve">
     <value>Song</value>
@@ -450,6 +501,30 @@
   </data>
   <data name="columnHeaderFavorite.Width" type="System.Int32, mscorlib">
     <value>250</value>
+  </data>
+  <metadata name="contextMenuLibrary.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="favoriteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 24</value>
+  </data>
+  <data name="favoriteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Toggle Favorite</value>
+  </data>
+  <data name="addToPlaylistToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 24</value>
+  </data>
+  <data name="addToPlaylistToolStripMenuItem.Text" xml:space="preserve">
+    <value>Add to Playlist</value>
+  </data>
+  <data name="contextMenuLibrary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 52</value>
+  </data>
+  <data name="&gt;&gt;contextMenuLibrary.Name" xml:space="preserve">
+    <value>contextMenuLibrary</value>
+  </data>
+  <data name="&gt;&gt;contextMenuLibrary.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="listViewLibrary.Location" type="System.Drawing.Point, System.Drawing">
     <value>42, 17</value>
@@ -470,7 +545,7 @@
     <value>tabLibrary</value>
   </data>
   <data name="&gt;&gt;listViewLibrary.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="buttonAddSong.Location" type="System.Drawing.Point, System.Drawing">
     <value>65, 560</value>
@@ -494,7 +569,7 @@
     <value>tabLibrary</value>
   </data>
   <data name="&gt;&gt;buttonAddSong.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="comboBoxFilter.Items" xml:space="preserve">
     <value>All</value>
@@ -521,7 +596,7 @@
     <value>tabLibrary</value>
   </data>
   <data name="&gt;&gt;comboBoxFilter.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="tabLibrary.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 25</value>
@@ -550,6 +625,63 @@
   <data name="&gt;&gt;tabLibrary.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="labelTime.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 356</value>
+  </data>
+  <data name="labelTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 16</value>
+  </data>
+  <data name="labelTime.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="labelTime.Text" xml:space="preserve">
+    <value>0:00 / 0:00</value>
+  </data>
+  <data name="&gt;&gt;labelTime.Name" xml:space="preserve">
+    <value>labelTime</value>
+  </data>
+  <data name="&gt;&gt;labelTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelTime.Parent" xml:space="preserve">
+    <value>tabPlaySongs</value>
+  </data>
+  <data name="&gt;&gt;labelTime.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="shuffleButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 13.8pt</value>
+  </data>
+  <data name="shuffleButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="shuffleButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>345, 593</value>
+  </data>
+  <data name="shuffleButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="shuffleButton.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="shuffleButton.Text" xml:space="preserve">
+    <value>🔀</value>
+  </data>
+  <data name="&gt;&gt;shuffleButton.Name" xml:space="preserve">
+    <value>shuffleButton</value>
+  </data>
+  <data name="&gt;&gt;shuffleButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;shuffleButton.Parent" xml:space="preserve">
+    <value>tabPlaySongs</value>
+  </data>
+  <data name="&gt;&gt;shuffleButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -575,7 +707,7 @@
     <value>tabPlaySongs</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -602,7 +734,7 @@
     <value>tabPlaySongs</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="labelSongTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -629,7 +761,7 @@
     <value>tabPlaySongs</value>
   </data>
   <data name="&gt;&gt;labelSongTitle.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="trackBarProgress.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -653,7 +785,7 @@
     <value>tabPlaySongs</value>
   </data>
   <data name="&gt;&gt;trackBarProgress.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="trackBarVolume.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -677,13 +809,13 @@
     <value>tabPlaySongs</value>
   </data>
   <data name="&gt;&gt;trackBarVolume.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="buttonPlay.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="buttonPlay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>186, 593</value>
+    <value>169, 593</value>
   </data>
   <data name="buttonPlay.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 50</value>
@@ -704,13 +836,13 @@
     <value>tabPlaySongs</value>
   </data>
   <data name="&gt;&gt;buttonPlay.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="buttonPause.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="buttonPause.Location" type="System.Drawing.Point, System.Drawing">
-    <value>246, 593</value>
+    <value>229, 593</value>
   </data>
   <data name="buttonPause.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 50</value>
@@ -731,13 +863,13 @@
     <value>tabPlaySongs</value>
   </data>
   <data name="&gt;&gt;buttonPause.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="buttonNext.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="buttonNext.Location" type="System.Drawing.Point, System.Drawing">
-    <value>306, 593</value>
+    <value>289, 593</value>
   </data>
   <data name="buttonNext.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 50</value>
@@ -758,13 +890,13 @@
     <value>tabPlaySongs</value>
   </data>
   <data name="&gt;&gt;buttonNext.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="buttonPrev.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="buttonPrev.Location" type="System.Drawing.Point, System.Drawing">
-    <value>126, 593</value>
+    <value>109, 593</value>
   </data>
   <data name="buttonPrev.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 50</value>
@@ -785,7 +917,7 @@
     <value>tabPlaySongs</value>
   </data>
   <data name="&gt;&gt;buttonPrev.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="pictureBoxCover.Location" type="System.Drawing.Point, System.Drawing">
     <value>123, 25</value>
@@ -809,7 +941,7 @@
     <value>tabPlaySongs</value>
   </data>
   <data name="&gt;&gt;pictureBoxCover.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="tabPlaySongs.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 25</value>
@@ -838,6 +970,30 @@
   <data name="&gt;&gt;tabPlaySongs.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="deleteVideoButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>62, 616</value>
+  </data>
+  <data name="deleteVideoButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 33</value>
+  </data>
+  <data name="deleteVideoButton.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="deleteVideoButton.Text" xml:space="preserve">
+    <value>Delete video</value>
+  </data>
+  <data name="&gt;&gt;deleteVideoButton.Name" xml:space="preserve">
+    <value>deleteVideoButton</value>
+  </data>
+  <data name="&gt;&gt;deleteVideoButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;deleteVideoButton.Parent" xml:space="preserve">
+    <value>tabVideoLibrary</value>
+  </data>
+  <data name="&gt;&gt;deleteVideoButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="buttonAddVideo.Location" type="System.Drawing.Point, System.Drawing">
     <value>62, 559</value>
   </data>
@@ -860,7 +1016,7 @@
     <value>tabVideoLibrary</value>
   </data>
   <data name="&gt;&gt;buttonAddVideo.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="labelVideoFilter.Location" type="System.Drawing.Point, System.Drawing">
     <value>250, 561</value>
@@ -887,7 +1043,7 @@
     <value>tabVideoLibrary</value>
   </data>
   <data name="&gt;&gt;labelVideoFilter.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="comboBoxVideoFilter.Items" xml:space="preserve">
     <value>All</value>
@@ -914,7 +1070,7 @@
     <value>tabVideoLibrary</value>
   </data>
   <data name="&gt;&gt;comboBoxVideoFilter.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="columnHeader1.Text" xml:space="preserve">
     <value>Video</value>
@@ -947,7 +1103,7 @@
     <value>tabVideoLibrary</value>
   </data>
   <data name="&gt;&gt;listViewVideoLibrary.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="tabVideoLibrary.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 25</value>
@@ -1181,7 +1337,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tabControlHome.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1191,9 +1347,6 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>512, 700</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Music Player</value>
@@ -1209,6 +1362,18 @@
   </data>
   <data name="&gt;&gt;columnHeaderFavorite.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;favoriteToolStripMenuItem.Name" xml:space="preserve">
+    <value>favoriteToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;favoriteToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;addToPlaylistToolStripMenuItem.Name" xml:space="preserve">
+    <value>addToPlaylistToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;addToPlaylistToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">
     <value>columnHeader1</value>

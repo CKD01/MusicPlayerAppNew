@@ -1,2 +1,3 @@
-2025/12/14-15:33:51.962 da0 Creating DB C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\bin\Debug\MusicApp.exe.WebView2\EBWebView\Default\shared_proto_db since it was missing.
-2025/12/14-15:33:51.965 da0 Reusing MANIFEST C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\bin\Debug\MusicApp.exe.WebView2\EBWebView\Default\shared_proto_db/MANIFEST-000001
+2025/12/14-19:31:40.759 c180 Reusing MANIFEST C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\bin\Debug\MusicApp.exe.WebView2\EBWebView\Default\shared_proto_db/MANIFEST-000001
+2025/12/14-19:31:40.760 c180 Recovering log #3
+2025/12/14-19:31:40.761 c180 Reusing old log C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\bin\Debug\MusicApp.exe.WebView2\EBWebView\Default\shared_proto_db/000003.log 

@@ -27,20 +27,35 @@ namespace MusicApp
 
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControlHome = new System.Windows.Forms.TabControl();
             this.tabMain = new System.Windows.Forms.TabPage();
             this.labelWelcome = new System.Windows.Forms.Label();
             this.pictureHomeCover = new System.Windows.Forms.PictureBox();
             this.labelSubtitle = new System.Windows.Forms.Label();
+            this.tabSearch = new System.Windows.Forms.TabPage();
+            this.listBoxSearchResults = new System.Windows.Forms.ListBox();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.tabPlayLists = new System.Windows.Forms.TabPage();
+            this.listViewPlaylistSongs = new System.Windows.Forms.ListView();
+            this.buttonNewPlaylist = new System.Windows.Forms.Button();
+            this.listBoxPlaylists = new System.Windows.Forms.ListBox();
             this.tabLibrary = new System.Windows.Forms.TabPage();
+            this.removeSongButton = new System.Windows.Forms.Button();
+            this.addToPlayListButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.listViewLibrary = new System.Windows.Forms.ListView();
             this.columnHeaderSong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderFavorite = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.contextMenuLibrary = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.favoriteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addToPlaylistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonAddSong = new System.Windows.Forms.Button();
             this.comboBoxFilter = new System.Windows.Forms.ComboBox();
             this.tabPlaySongs = new System.Windows.Forms.TabPage();
+            this.labelTime = new System.Windows.Forms.Label();
+            this.shuffleButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.labelSongTitle = new System.Windows.Forms.Label();
@@ -51,41 +66,36 @@ namespace MusicApp
             this.buttonNext = new System.Windows.Forms.Button();
             this.buttonPrev = new System.Windows.Forms.Button();
             this.pictureBoxCover = new System.Windows.Forms.PictureBox();
+            this.tabVideoLibrary = new System.Windows.Forms.TabPage();
+            this.deleteVideoButton = new System.Windows.Forms.Button();
+            this.buttonAddVideo = new System.Windows.Forms.Button();
+            this.labelVideoFilter = new System.Windows.Forms.Label();
+            this.comboBoxVideoFilter = new System.Windows.Forms.ComboBox();
+            this.listViewVideoLibrary = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tabNowPlayingVideo = new System.Windows.Forms.TabPage();
+            this.webViewVideo = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.tabSettings = new System.Windows.Forms.TabPage();
             this.languageComboBox = new System.Windows.Forms.ComboBox();
             this.languageLabel = new System.Windows.Forms.Label();
             this.labelTheme = new System.Windows.Forms.Label();
             this.comboBoxTheme = new System.Windows.Forms.ComboBox();
-            this.tabVideoLibrary = new System.Windows.Forms.TabPage();
-            this.listViewVideoLibrary = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.buttonAddVideo = new System.Windows.Forms.Button();
-            this.labelVideoFilter = new System.Windows.Forms.Label();
-            this.comboBoxVideoFilter = new System.Windows.Forms.ComboBox();
-            this.tabNowPlayingVideo = new System.Windows.Forms.TabPage();
-            this.webViewVideo = new Microsoft.Web.WebView2.WinForms.WebView2();
-            this.tabSearch = new System.Windows.Forms.TabPage();
-            this.textBoxSearch = new System.Windows.Forms.TextBox();
-            this.listBoxSearchResults = new System.Windows.Forms.ListBox();
-            this.tabPlayLists = new System.Windows.Forms.TabPage();
-            this.buttonNewPlaylist = new System.Windows.Forms.Button();
-            this.listBoxPlaylists = new System.Windows.Forms.ListBox();
-            this.listViewPlaylistSongs = new System.Windows.Forms.ListView();
             this.tabControlHome.SuspendLayout();
             this.tabMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureHomeCover)).BeginInit();
+            this.tabSearch.SuspendLayout();
+            this.tabPlayLists.SuspendLayout();
             this.tabLibrary.SuspendLayout();
+            this.contextMenuLibrary.SuspendLayout();
             this.tabPlaySongs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarProgress)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarVolume)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCover)).BeginInit();
-            this.tabSettings.SuspendLayout();
             this.tabVideoLibrary.SuspendLayout();
             this.tabNowPlayingVideo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.webViewVideo)).BeginInit();
-            this.tabSearch.SuspendLayout();
-            this.tabPlayLists.SuspendLayout();
+            this.tabSettings.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlHome
@@ -128,8 +138,61 @@ namespace MusicApp
             resources.ApplyResources(this.labelSubtitle, "labelSubtitle");
             this.labelSubtitle.Name = "labelSubtitle";
             // 
+            // tabSearch
+            // 
+            this.tabSearch.Controls.Add(this.listBoxSearchResults);
+            this.tabSearch.Controls.Add(this.textBoxSearch);
+            resources.ApplyResources(this.tabSearch, "tabSearch");
+            this.tabSearch.Name = "tabSearch";
+            this.tabSearch.UseVisualStyleBackColor = true;
+            // 
+            // listBoxSearchResults
+            // 
+            this.listBoxSearchResults.FormattingEnabled = true;
+            resources.ApplyResources(this.listBoxSearchResults, "listBoxSearchResults");
+            this.listBoxSearchResults.Name = "listBoxSearchResults";
+            this.listBoxSearchResults.DoubleClick += new System.EventHandler(this.listBoxSearchResults_DoubleClick);
+            // 
+            // textBoxSearch
+            // 
+            resources.ApplyResources(this.textBoxSearch, "textBoxSearch");
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
+            // 
+            // tabPlayLists
+            // 
+            this.tabPlayLists.Controls.Add(this.listViewPlaylistSongs);
+            this.tabPlayLists.Controls.Add(this.buttonNewPlaylist);
+            this.tabPlayLists.Controls.Add(this.listBoxPlaylists);
+            resources.ApplyResources(this.tabPlayLists, "tabPlayLists");
+            this.tabPlayLists.Name = "tabPlayLists";
+            this.tabPlayLists.UseVisualStyleBackColor = true;
+            // 
+            // listViewPlaylistSongs
+            // 
+            resources.ApplyResources(this.listViewPlaylistSongs, "listViewPlaylistSongs");
+            this.listViewPlaylistSongs.HideSelection = false;
+            this.listViewPlaylistSongs.Name = "listViewPlaylistSongs";
+            this.listViewPlaylistSongs.UseCompatibleStateImageBehavior = false;
+            // 
+            // buttonNewPlaylist
+            // 
+            resources.ApplyResources(this.buttonNewPlaylist, "buttonNewPlaylist");
+            this.buttonNewPlaylist.Name = "buttonNewPlaylist";
+            this.buttonNewPlaylist.UseVisualStyleBackColor = true;
+            this.buttonNewPlaylist.Click += new System.EventHandler(this.buttonNewPlaylist_Click);
+            // 
+            // listBoxPlaylists
+            // 
+            resources.ApplyResources(this.listBoxPlaylists, "listBoxPlaylists");
+            this.listBoxPlaylists.FormattingEnabled = true;
+            this.listBoxPlaylists.Name = "listBoxPlaylists";
+            this.listBoxPlaylists.SelectedIndexChanged += new System.EventHandler(this.listBoxPlaylists_SelectedIndexChanged_1);
+            // 
             // tabLibrary
             // 
+            this.tabLibrary.Controls.Add(this.removeSongButton);
+            this.tabLibrary.Controls.Add(this.addToPlayListButton);
             this.tabLibrary.Controls.Add(this.label3);
             this.tabLibrary.Controls.Add(this.listViewLibrary);
             this.tabLibrary.Controls.Add(this.buttonAddSong);
@@ -137,6 +200,20 @@ namespace MusicApp
             resources.ApplyResources(this.tabLibrary, "tabLibrary");
             this.tabLibrary.Name = "tabLibrary";
             this.tabLibrary.UseVisualStyleBackColor = true;
+            // 
+            // removeSongButton
+            // 
+            resources.ApplyResources(this.removeSongButton, "removeSongButton");
+            this.removeSongButton.Name = "removeSongButton";
+            this.removeSongButton.UseVisualStyleBackColor = true;
+            this.removeSongButton.Click += new System.EventHandler(this.removeSongButton_Click);
+            // 
+            // addToPlayListButton
+            // 
+            resources.ApplyResources(this.addToPlayListButton, "addToPlayListButton");
+            this.addToPlayListButton.Name = "addToPlayListButton";
+            this.addToPlayListButton.UseVisualStyleBackColor = true;
+            this.addToPlayListButton.Click += new System.EventHandler(this.addToPlayListButton_Click);
             // 
             // label3
             // 
@@ -148,6 +225,7 @@ namespace MusicApp
             this.listViewLibrary.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderSong,
             this.columnHeaderFavorite});
+            this.listViewLibrary.ContextMenuStrip = this.contextMenuLibrary;
             this.listViewLibrary.FullRowSelect = true;
             this.listViewLibrary.GridLines = true;
             this.listViewLibrary.HideSelection = false;
@@ -165,6 +243,27 @@ namespace MusicApp
             // columnHeaderFavorite
             // 
             resources.ApplyResources(this.columnHeaderFavorite, "columnHeaderFavorite");
+            // 
+            // contextMenuLibrary
+            // 
+            this.contextMenuLibrary.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuLibrary.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.favoriteToolStripMenuItem,
+            this.addToPlaylistToolStripMenuItem});
+            this.contextMenuLibrary.Name = "contextMenuLibrary";
+            resources.ApplyResources(this.contextMenuLibrary, "contextMenuLibrary");
+            this.contextMenuLibrary.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuLibrary_Opening);
+            // 
+            // favoriteToolStripMenuItem
+            // 
+            this.favoriteToolStripMenuItem.Name = "favoriteToolStripMenuItem";
+            resources.ApplyResources(this.favoriteToolStripMenuItem, "favoriteToolStripMenuItem");
+            this.favoriteToolStripMenuItem.Click += new System.EventHandler(this.favoriteToolStripMenuItem_Click);
+            // 
+            // addToPlaylistToolStripMenuItem
+            // 
+            this.addToPlaylistToolStripMenuItem.Name = "addToPlaylistToolStripMenuItem";
+            resources.ApplyResources(this.addToPlaylistToolStripMenuItem, "addToPlaylistToolStripMenuItem");
             // 
             // buttonAddSong
             // 
@@ -185,6 +284,8 @@ namespace MusicApp
             // 
             // tabPlaySongs
             // 
+            this.tabPlaySongs.Controls.Add(this.labelTime);
+            this.tabPlaySongs.Controls.Add(this.shuffleButton);
             this.tabPlaySongs.Controls.Add(this.label2);
             this.tabPlaySongs.Controls.Add(this.label1);
             this.tabPlaySongs.Controls.Add(this.labelSongTitle);
@@ -198,6 +299,17 @@ namespace MusicApp
             resources.ApplyResources(this.tabPlaySongs, "tabPlaySongs");
             this.tabPlaySongs.Name = "tabPlaySongs";
             this.tabPlaySongs.UseVisualStyleBackColor = true;
+            // 
+            // labelTime
+            // 
+            resources.ApplyResources(this.labelTime, "labelTime");
+            this.labelTime.Name = "labelTime";
+            // 
+            // shuffleButton
+            // 
+            resources.ApplyResources(this.shuffleButton, "shuffleButton");
+            this.shuffleButton.Name = "shuffleButton";
+            this.shuffleButton.Click += new System.EventHandler(this.shuffleButton_Click);
             // 
             // label2
             // 
@@ -264,6 +376,81 @@ namespace MusicApp
             this.pictureBoxCover.Name = "pictureBoxCover";
             this.pictureBoxCover.TabStop = false;
             // 
+            // tabVideoLibrary
+            // 
+            this.tabVideoLibrary.Controls.Add(this.deleteVideoButton);
+            this.tabVideoLibrary.Controls.Add(this.buttonAddVideo);
+            this.tabVideoLibrary.Controls.Add(this.labelVideoFilter);
+            this.tabVideoLibrary.Controls.Add(this.comboBoxVideoFilter);
+            this.tabVideoLibrary.Controls.Add(this.listViewVideoLibrary);
+            resources.ApplyResources(this.tabVideoLibrary, "tabVideoLibrary");
+            this.tabVideoLibrary.Name = "tabVideoLibrary";
+            this.tabVideoLibrary.UseVisualStyleBackColor = true;
+            // 
+            // deleteVideoButton
+            // 
+            resources.ApplyResources(this.deleteVideoButton, "deleteVideoButton");
+            this.deleteVideoButton.Name = "deleteVideoButton";
+            this.deleteVideoButton.Click += new System.EventHandler(this.deleteVideoButton_Click);
+            // 
+            // buttonAddVideo
+            // 
+            resources.ApplyResources(this.buttonAddVideo, "buttonAddVideo");
+            this.buttonAddVideo.Name = "buttonAddVideo";
+            this.buttonAddVideo.Click += new System.EventHandler(this.buttonAddVideo_Click);
+            // 
+            // labelVideoFilter
+            // 
+            resources.ApplyResources(this.labelVideoFilter, "labelVideoFilter");
+            this.labelVideoFilter.Name = "labelVideoFilter";
+            // 
+            // comboBoxVideoFilter
+            // 
+            this.comboBoxVideoFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxVideoFilter.Items.AddRange(new object[] {
+            resources.GetString("comboBoxVideoFilter.Items"),
+            resources.GetString("comboBoxVideoFilter.Items1")});
+            resources.ApplyResources(this.comboBoxVideoFilter, "comboBoxVideoFilter");
+            this.comboBoxVideoFilter.Name = "comboBoxVideoFilter";
+            // 
+            // listViewVideoLibrary
+            // 
+            this.listViewVideoLibrary.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+            this.listViewVideoLibrary.FullRowSelect = true;
+            this.listViewVideoLibrary.GridLines = true;
+            this.listViewVideoLibrary.HideSelection = false;
+            resources.ApplyResources(this.listViewVideoLibrary, "listViewVideoLibrary");
+            this.listViewVideoLibrary.Name = "listViewVideoLibrary";
+            this.listViewVideoLibrary.UseCompatibleStateImageBehavior = false;
+            this.listViewVideoLibrary.View = System.Windows.Forms.View.Details;
+            this.listViewVideoLibrary.DoubleClick += new System.EventHandler(this.listViewVideoLibrary_DoubleClick);
+            // 
+            // columnHeader1
+            // 
+            resources.ApplyResources(this.columnHeader1, "columnHeader1");
+            // 
+            // columnHeader2
+            // 
+            resources.ApplyResources(this.columnHeader2, "columnHeader2");
+            // 
+            // tabNowPlayingVideo
+            // 
+            this.tabNowPlayingVideo.Controls.Add(this.webViewVideo);
+            resources.ApplyResources(this.tabNowPlayingVideo, "tabNowPlayingVideo");
+            this.tabNowPlayingVideo.Name = "tabNowPlayingVideo";
+            this.tabNowPlayingVideo.UseVisualStyleBackColor = true;
+            // 
+            // webViewVideo
+            // 
+            this.webViewVideo.AllowExternalDrop = true;
+            this.webViewVideo.CreationProperties = null;
+            this.webViewVideo.DefaultBackgroundColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.webViewVideo, "webViewVideo");
+            this.webViewVideo.Name = "webViewVideo";
+            this.webViewVideo.ZoomFactor = 1D;
+            // 
             // tabSettings
             // 
             this.tabSettings.Controls.Add(this.languageComboBox);
@@ -305,124 +492,6 @@ namespace MusicApp
             this.comboBoxTheme.Name = "comboBoxTheme";
             this.comboBoxTheme.SelectedIndexChanged += new System.EventHandler(this.ComboBoxTheme_SelectedIndexChanged);
             // 
-            // tabVideoLibrary
-            // 
-            this.tabVideoLibrary.Controls.Add(this.buttonAddVideo);
-            this.tabVideoLibrary.Controls.Add(this.labelVideoFilter);
-            this.tabVideoLibrary.Controls.Add(this.comboBoxVideoFilter);
-            this.tabVideoLibrary.Controls.Add(this.listViewVideoLibrary);
-            resources.ApplyResources(this.tabVideoLibrary, "tabVideoLibrary");
-            this.tabVideoLibrary.Name = "tabVideoLibrary";
-            this.tabVideoLibrary.UseVisualStyleBackColor = true;
-            // 
-            // listViewVideoLibrary
-            // 
-            this.listViewVideoLibrary.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2});
-            this.listViewVideoLibrary.FullRowSelect = true;
-            this.listViewVideoLibrary.GridLines = true;
-            this.listViewVideoLibrary.HideSelection = false;
-            resources.ApplyResources(this.listViewVideoLibrary, "listViewVideoLibrary");
-            this.listViewVideoLibrary.Name = "listViewVideoLibrary";
-            this.listViewVideoLibrary.UseCompatibleStateImageBehavior = false;
-            this.listViewVideoLibrary.View = System.Windows.Forms.View.Details;
-            this.listViewVideoLibrary.DoubleClick += new System.EventHandler(this.listViewVideoLibrary_DoubleClick);
-            // 
-            // columnHeader1
-            // 
-            resources.ApplyResources(this.columnHeader1, "columnHeader1");
-            // 
-            // columnHeader2
-            // 
-            resources.ApplyResources(this.columnHeader2, "columnHeader2");
-            // 
-            // buttonAddVideo
-            // 
-            resources.ApplyResources(this.buttonAddVideo, "buttonAddVideo");
-            this.buttonAddVideo.Name = "buttonAddVideo";
-            this.buttonAddVideo.Click += new System.EventHandler(this.buttonAddVideo_Click);
-            // 
-            // labelVideoFilter
-            // 
-            resources.ApplyResources(this.labelVideoFilter, "labelVideoFilter");
-            this.labelVideoFilter.Name = "labelVideoFilter";
-            // 
-            // comboBoxVideoFilter
-            // 
-            this.comboBoxVideoFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxVideoFilter.Items.AddRange(new object[] {
-            resources.GetString("comboBoxVideoFilter.Items"),
-            resources.GetString("comboBoxVideoFilter.Items1")});
-            resources.ApplyResources(this.comboBoxVideoFilter, "comboBoxVideoFilter");
-            this.comboBoxVideoFilter.Name = "comboBoxVideoFilter";
-            // 
-            // tabNowPlayingVideo
-            // 
-            this.tabNowPlayingVideo.Controls.Add(this.webViewVideo);
-            resources.ApplyResources(this.tabNowPlayingVideo, "tabNowPlayingVideo");
-            this.tabNowPlayingVideo.Name = "tabNowPlayingVideo";
-            this.tabNowPlayingVideo.UseVisualStyleBackColor = true;
-            // 
-            // webViewVideo
-            // 
-            this.webViewVideo.AllowExternalDrop = true;
-            this.webViewVideo.CreationProperties = null;
-            this.webViewVideo.DefaultBackgroundColor = System.Drawing.Color.Black;
-            resources.ApplyResources(this.webViewVideo, "webViewVideo");
-            this.webViewVideo.Name = "webViewVideo";
-            this.webViewVideo.ZoomFactor = 1D;
-            // 
-            // tabSearch
-            // 
-            this.tabSearch.Controls.Add(this.listBoxSearchResults);
-            this.tabSearch.Controls.Add(this.textBoxSearch);
-            resources.ApplyResources(this.tabSearch, "tabSearch");
-            this.tabSearch.Name = "tabSearch";
-            this.tabSearch.UseVisualStyleBackColor = true;
-            // 
-            // textBoxSearch
-            // 
-            resources.ApplyResources(this.textBoxSearch, "textBoxSearch");
-            this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
-            // 
-            // listBoxSearchResults
-            // 
-            this.listBoxSearchResults.FormattingEnabled = true;
-            resources.ApplyResources(this.listBoxSearchResults, "listBoxSearchResults");
-            this.listBoxSearchResults.Name = "listBoxSearchResults";
-            this.listBoxSearchResults.DoubleClick += new System.EventHandler(this.listBoxSearchResults_DoubleClick);
-            // 
-            // tabPlayLists
-            // 
-            this.tabPlayLists.Controls.Add(this.listViewPlaylistSongs);
-            this.tabPlayLists.Controls.Add(this.buttonNewPlaylist);
-            this.tabPlayLists.Controls.Add(this.listBoxPlaylists);
-            resources.ApplyResources(this.tabPlayLists, "tabPlayLists");
-            this.tabPlayLists.Name = "tabPlayLists";
-            this.tabPlayLists.UseVisualStyleBackColor = true;
-            // 
-            // buttonNewPlaylist
-            // 
-            resources.ApplyResources(this.buttonNewPlaylist, "buttonNewPlaylist");
-            this.buttonNewPlaylist.Name = "buttonNewPlaylist";
-            this.buttonNewPlaylist.UseVisualStyleBackColor = true;
-            this.buttonNewPlaylist.Click += new System.EventHandler(this.buttonNewPlaylist_Click);
-            // 
-            // listBoxPlaylists
-            // 
-            resources.ApplyResources(this.listBoxPlaylists, "listBoxPlaylists");
-            this.listBoxPlaylists.FormattingEnabled = true;
-            this.listBoxPlaylists.Name = "listBoxPlaylists";
-            // 
-            // listViewPlaylistSongs
-            // 
-            resources.ApplyResources(this.listViewPlaylistSongs, "listViewPlaylistSongs");
-            this.listViewPlaylistSongs.HideSelection = false;
-            this.listViewPlaylistSongs.Name = "listViewPlaylistSongs";
-            this.listViewPlaylistSongs.UseCompatibleStateImageBehavior = false;
-            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
@@ -432,20 +501,21 @@ namespace MusicApp
             this.tabControlHome.ResumeLayout(false);
             this.tabMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureHomeCover)).EndInit();
+            this.tabSearch.ResumeLayout(false);
+            this.tabSearch.PerformLayout();
+            this.tabPlayLists.ResumeLayout(false);
             this.tabLibrary.ResumeLayout(false);
+            this.contextMenuLibrary.ResumeLayout(false);
             this.tabPlaySongs.ResumeLayout(false);
             this.tabPlaySongs.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarProgress)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarVolume)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCover)).EndInit();
-            this.tabSettings.ResumeLayout(false);
-            this.tabSettings.PerformLayout();
             this.tabVideoLibrary.ResumeLayout(false);
             this.tabNowPlayingVideo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.webViewVideo)).EndInit();
-            this.tabSearch.ResumeLayout(false);
-            this.tabSearch.PerformLayout();
-            this.tabPlayLists.ResumeLayout(false);
+            this.tabSettings.ResumeLayout(false);
+            this.tabSettings.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -504,6 +574,14 @@ namespace MusicApp
         private Button buttonNewPlaylist;
         private ListBox listBoxPlaylists;
         private ListView listViewPlaylistSongs;
+        private ContextMenuStrip contextMenuLibrary;
+        private ToolStripMenuItem favoriteToolStripMenuItem;
+        private ToolStripMenuItem addToPlaylistToolStripMenuItem;
+        private Button addToPlayListButton;
+        private Button removeSongButton;
+        private Button shuffleButton;
+        private Label labelTime;
+        private Button deleteVideoButton;
     }
 }
 

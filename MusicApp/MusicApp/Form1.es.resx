@@ -120,11 +120,23 @@
   <data name="tabMain.Text" xml:space="preserve">
     <value>Inicio</value>
   </data>
+  <data name="tabSearch.Text" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
+  <data name="tabPlayLists.Text" xml:space="preserve">
+    <value>Listas de reproducción</value>
+  </data>
   <data name="tabLibrary.Text" xml:space="preserve">
     <value>Biblioteca</value>
   </data>
   <data name="tabPlaySongs.Text" xml:space="preserve">
     <value>Canciones reproducidas</value>
+  </data>
+  <data name="tabVideoLibrary.Text" xml:space="preserve">
+    <value>Videoteca</value>
+  </data>
+  <data name="tabNowPlayingVideo.Text" xml:space="preserve">
+    <value>Vídeos jugando</value>
   </data>
   <data name="tabSettings.Text" xml:space="preserve">
     <value>Configuración</value>
@@ -135,7 +147,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="labelWelcome.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 40</value>
+    <value>70, 40</value>
   </data>
   <data name="labelWelcome.Size" type="System.Drawing.Size, System.Drawing">
     <value>365, 75</value>
@@ -147,16 +159,34 @@
     <value>NoControl</value>
   </data>
   <data name="pictureHomeCover.Location" type="System.Drawing.Point, System.Drawing">
-    <value>69, 172</value>
+    <value>102, 172</value>
   </data>
   <data name="labelSubtitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="labelSubtitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>69, 115</value>
+    <value>119, 115</value>
   </data>
   <data name="labelSubtitle.Text" xml:space="preserve">
     <value>Disfruta de tu colección de música</value>
+  </data>
+  <data name="buttonNewPlaylist.Text" xml:space="preserve">
+    <value>Nueva lista de reproducción</value>
+  </data>
+  <data name="removeSongButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>65, 591</value>
+  </data>
+  <data name="removeSongButton.Text" xml:space="preserve">
+    <value>Eliminar canción</value>
+  </data>
+  <data name="addToPlayListButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>65, 627</value>
+  </data>
+  <data name="addToPlayListButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 41</value>
+  </data>
+  <data name="addToPlayListButton.Text" xml:space="preserve">
+    <value>Añadir a una lista</value>
   </data>
   <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -176,80 +206,77 @@
   <data name="buttonAddSong.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="buttonAddSong.Location" type="System.Drawing.Point, System.Drawing">
+    <value>65, 552</value>
+  </data>
   <data name="buttonAddSong.Text" xml:space="preserve">
     <value>Agregar canción</value>
   </data>
-  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="labelTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>170, 356</value>
+  </data>
+  <data name="shuffleButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 593</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 423</value>
+    <value>77, 423</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Volumen:</value>
   </data>
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 307</value>
+    <value>77, 307</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Tiempo:</value>
   </data>
-  <data name="labelSongTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="labelSongTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 270</value>
+    <value>77, 270</value>
   </data>
   <data name="labelSongTitle.Text" xml:space="preserve">
     <value>Título:</value>
   </data>
-  <data name="trackBarProgress.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="trackBarProgress.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 340</value>
-  </data>
-  <data name="trackBarVolume.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+    <value>77, 340</value>
   </data>
   <data name="trackBarVolume.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 456</value>
-  </data>
-  <data name="buttonPlay.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+    <value>77, 456</value>
   </data>
   <data name="buttonPlay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>153, 544</value>
-  </data>
-  <data name="buttonPause.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+    <value>186, 544</value>
   </data>
   <data name="buttonPause.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 544</value>
-  </data>
-  <data name="buttonNext.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+    <value>246, 544</value>
   </data>
   <data name="buttonNext.Location" type="System.Drawing.Point, System.Drawing">
-    <value>273, 544</value>
-  </data>
-  <data name="buttonPrev.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+    <value>306, 544</value>
   </data>
   <data name="buttonPrev.Location" type="System.Drawing.Point, System.Drawing">
-    <value>93, 544</value>
+    <value>126, 544</value>
   </data>
   <data name="pictureBoxCover.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="pictureBoxCover.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 24</value>
+    <value>129, 24</value>
   </data>
   <data name="pictureBoxCover.Size" type="System.Drawing.Size, System.Drawing">
     <value>235, 229</value>
+  </data>
+  <data name="buttonAddVideo.Text" xml:space="preserve">
+    <value>Añadir un vídeo</value>
+  </data>
+  <data name="labelVideoFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 561</value>
+  </data>
+  <data name="labelVideoFilter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 30</value>
+  </data>
+  <data name="labelVideoFilter.Text" xml:space="preserve">
+    <value>Filtrar Por:</value>
+  </data>
+  <data name="columnHeader2.Text" xml:space="preserve">
+    <value>Me gusta</value>
   </data>
   <data name="languageLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -265,6 +292,15 @@
   </data>
   <data name="labelTheme.Text" xml:space="preserve">
     <value>Tema:</value>
+  </data>
+  <data name="deleteVideoButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="deleteVideoButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 30</value>
+  </data>
+  <data name="deleteVideoButton.Text" xml:space="preserve">
+    <value>Eliminar vídeo</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Reproductor de música</value>

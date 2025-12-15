@@ -1,2 +1,3 @@
-2025/12/14-15:33:52.073 d9d8 Creating DB C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\bin\Debug\MusicApp.exe.WebView2\EBWebView\Default\Local Storage\leveldb since it was missing.
-2025/12/14-15:33:52.098 d9d8 Reusing MANIFEST C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\bin\Debug\MusicApp.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2025/12/14-19:31:40.809 af84 Reusing MANIFEST C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\bin\Debug\MusicApp.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2025/12/14-19:31:40.837 af84 Recovering log #3
+2025/12/14-19:31:40.841 af84 Reusing old log C:\Users\Credo Dotse\OneDrive\Documents\GitHub\MusicPlayerAppNew\MusicApp\MusicApp\bin\Debug\MusicApp.exe.WebView2\EBWebView\Default\Local Storage\leveldb/000003.log 

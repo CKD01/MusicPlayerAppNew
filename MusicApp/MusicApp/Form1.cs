@@ -6,6 +6,7 @@ using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
 using WMPLib;
+using Microsoft.VisualBasic;
 
 namespace MusicApp
 {
@@ -19,10 +20,13 @@ namespace MusicApp
         private WindowsMediaPlayer player;
         private Timer playbackTimer;
         private string currentVideoPath;
+        private bool isShuffleOn = false;
+        private Random rng = new Random();
 
         public Form1()
         {
             InitializeComponent();
+
 
             player = new WindowsMediaPlayer();
             playbackTimer = new Timer();
@@ -34,8 +38,11 @@ namespace MusicApp
             trackBarVolume.Value = player.settings.volume;
 
             Database.Initialize();
+            LoadPlaylists();
             LoadSongsFromDatabase();
             LoadVideosFromDatabase();
+            addToPlayListButton.Click += addToPlayListButton_Click;
+
         }
 
         private void LoadSongsFromDatabase()
@@ -151,6 +158,26 @@ namespace MusicApp
             labelSongTitle.Text = songName;
             currentSongIndex = index;
             playbackTimer.Start();
+
+            using (var conn = Database.GetConnection())
+            {
+                conn.Open();
+
+                string sql = @"
+                UPDATE Songs
+                SET 
+                    PlayCount = PlayCount + 1,
+                    LastPlayed = @time
+                WHERE FilePath = @path";
+
+                using (var cmd = new SQLiteCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@time", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                    cmd.Parameters.AddWithValue("@path", songs[index]);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
         }
 
         private void buttonPlay_Click(object sender, EventArgs e)
@@ -181,10 +208,28 @@ namespace MusicApp
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
-            int nextIndex = currentSongIndex + 1;
-            if (nextIndex < songs.Count)
+            if (songs.Count == 0)
+                return;
+
+            if (isShuffleOn)
             {
+                int nextIndex;
+
+                do
+                {
+                    nextIndex = rng.Next(songs.Count);
+                }
+                while (songs.Count > 1 && nextIndex == currentSongIndex);
+
                 PlaySong(nextIndex);
+            }
+            else
+            {
+                int nextIndex = currentSongIndex + 1;
+                if (nextIndex < songs.Count)
+                {
+                    PlaySong(nextIndex);
+                }
             }
         }
 
@@ -207,6 +252,11 @@ namespace MusicApp
 
                 trackBarProgress.Maximum = (int)duration;
                 trackBarProgress.Value = (int)current;
+
+                labelTime.Text =
+                    TimeSpan.FromSeconds(current).ToString(@"m\:ss") +
+                    " / " +
+                    TimeSpan.FromSeconds(duration).ToString(@"m\:ss");
             }
         }
 
@@ -502,8 +552,11 @@ namespace MusicApp
 
         private void buttonNewPlaylist_Click(object sender, EventArgs e)
         {
-            string name = Microsoft.VisualBasic.Interaction.InputBox(
-            "Enter playlist name:", "New Playlist");
+            string name = Interaction.InputBox(
+                "Enter playlist name:",
+                "New Playlist",
+                ""
+            );
 
             if (string.IsNullOrWhiteSpace(name))
                 return;
@@ -511,8 +564,8 @@ namespace MusicApp
             using (var conn = Database.GetConnection())
             {
                 conn.Open();
-                string sql = "INSERT OR IGNORE INTO Playlists (Name) VALUES (@name)";
 
+                string sql = "INSERT OR IGNORE INTO Playlists (Name) VALUES (@name)";
                 using (var cmd = new SQLiteCommand(sql, conn))
                 {
                     cmd.Parameters.AddWithValue("@name", name);
@@ -548,22 +601,6 @@ namespace MusicApp
             }
         }
 
-        private void listBoxPlaylists_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listBoxPlaylists.SelectedItem == null) return;
-
-            string selected = listBoxPlaylists.SelectedItem.ToString();
-
-            if (selected.StartsWith("⭐"))
-            {
-                ShowFavoriteSongs();
-            }
-            else
-            {
-                ShowCustomPlaylist(selected);
-            }
-        }
-
         private void ShowFavoriteSongs()
         {
             listViewPlaylistSongs.Items.Clear();
@@ -572,8 +609,8 @@ namespace MusicApp
             {
                 if (favoriteStatus[i])
                 {
-                    listViewPlaylistSongs.Items.Add(
-                        Path.GetFileNameWithoutExtension(songs[i]));
+                    string name = Path.GetFileNameWithoutExtension(songs[i]);
+                    listViewPlaylistSongs.Items.Add(new ListViewItem(name));
                 }
             }
         }
@@ -601,13 +638,15 @@ namespace MusicApp
                         while (reader.Read())
                         {
                             string path = reader.GetString(0);
-                            listViewPlaylistSongs.Items.Add(
-                                Path.GetFileNameWithoutExtension(path));
+                            string name = Path.GetFileNameWithoutExtension(path);
+
+                            listViewPlaylistSongs.Items.Add(new ListViewItem(name));
                         }
                     }
                 }
             }
         }
+
 
         private void AddSongToPlaylist(string songPath, string playlistName)
         {
@@ -631,7 +670,337 @@ namespace MusicApp
             }
         }
 
+        private void listBoxPlaylists_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (listBoxPlaylists.SelectedItem == null)
+                return;
 
+            string selected = listBoxPlaylists.SelectedItem.ToString();
 
+            if (selected.Contains("Favorites"))
+                ShowFavoriteSongs();
+            else if (selected.Contains("Recently"))
+                ShowRecentlyPlayed();
+            else if (selected.Contains("Most"))
+                ShowMostPlayed();
+            else
+                ShowCustomPlaylist(selected);
+        }
+
+        private void contextMenuLibrary_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (listViewLibrary.SelectedIndices.Count == 0)
+            {
+                e.Cancel = true;
+                return;
+            }
+
+            addToPlaylistToolStripMenuItem.DropDownItems.Clear();
+
+            using (var conn = Database.GetConnection())
+            {
+                conn.Open();
+
+                string sql = "SELECT Name FROM Playlists ORDER BY Name";
+                using (var cmd = new SQLiteCommand(sql, conn))
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string playlistName = reader.GetString(0);
+
+                        ToolStripMenuItem item = new ToolStripMenuItem(playlistName);
+                        item.Click += AddSongToPlaylist_Click;
+
+                        addToPlaylistToolStripMenuItem.DropDownItems.Add(item);
+                    }
+                }
+            }
+
+            if (addToPlaylistToolStripMenuItem.DropDownItems.Count == 0)
+            {
+                addToPlaylistToolStripMenuItem.DropDownItems.Add(
+                    new ToolStripMenuItem("(No playlists)") { Enabled = false });
+            }
+        }
+        private void AddSongToPlaylist_Click(object sender, EventArgs e)
+        {
+            if (listViewLibrary.SelectedIndices.Count == 0)
+                return;
+
+            int songIndex = listViewLibrary.SelectedIndices[0];
+            string songPath = songs[songIndex];
+
+            string playlistName = ((ToolStripMenuItem)sender).Text;
+
+            using (var conn = Database.GetConnection())
+            {
+                conn.Open();
+
+                string sql = @"
+        INSERT OR IGNORE INTO PlaylistSongs (PlaylistId, SongPath)
+        VALUES (
+            (SELECT Id FROM Playlists WHERE Name = @name),
+            @path
+        )";
+
+                using (var cmd = new SQLiteCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@name", playlistName);
+                    cmd.Parameters.AddWithValue("@path", songPath);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
+            MessageBox.Show(
+                $"Added to playlist \"{playlistName}\"",
+                "Playlist",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
+        }
+
+        private void favoriteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (listViewLibrary.SelectedIndices.Count == 0)
+                return;
+
+            int index = listViewLibrary.SelectedIndices[0];
+
+            favoriteStatus[index] = !favoriteStatus[index];
+            bool isFav = favoriteStatus[index];
+
+            using (var conn = Database.GetConnection())
+            {
+                conn.Open();
+
+                string sql = "UPDATE Songs SET IsFavorite=@fav WHERE FilePath=@path";
+
+                using (var cmd = new SQLiteCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@fav", isFav ? 1 : 0);
+                    cmd.Parameters.AddWithValue("@path", songs[index]);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
+            RefreshLibraryList();
+        }
+
+        private void ShowRecentlyPlayed()
+        {
+            listViewPlaylistSongs.Items.Clear();
+
+            using (var conn = Database.GetConnection())
+            {
+                conn.Open();
+
+                string sql = @"
+        SELECT FilePath
+        FROM Songs
+        WHERE LastPlayed IS NOT NULL
+        ORDER BY LastPlayed DESC
+        LIMIT 20";
+
+                using (var cmd = new SQLiteCommand(sql, conn))
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string path = reader.GetString(0);
+                        string name = Path.GetFileNameWithoutExtension(path);
+
+                        listViewPlaylistSongs.Items.Add(new ListViewItem(name));
+                    }
+                }
+            }
+        }
+
+        private void ShowMostPlayed()
+        {
+            listViewPlaylistSongs.Items.Clear();
+
+            using (var conn = Database.GetConnection())
+            {
+                conn.Open();
+
+                string sql = @"
+        SELECT FilePath
+        FROM Songs
+        ORDER BY PlayCount DESC
+        LIMIT 20";
+
+                using (var cmd = new SQLiteCommand(sql, conn))
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string path = reader.GetString(0);
+                        string name = Path.GetFileNameWithoutExtension(path);
+
+                        listViewPlaylistSongs.Items.Add(new ListViewItem(name));
+                    }
+                }
+            }
+        }
+
+        private void addToPlayListButton_Click(object sender, EventArgs e)
+        {
+            // 1. Check if a song is selected
+            if (listViewLibrary.SelectedIndices.Count == 0)
+            {
+                MessageBox.Show("Please select a song first.");
+                return;
+            }
+
+            int songIndex = listViewLibrary.SelectedIndices[0];
+            string songPath = songs[songIndex];
+
+            // 2. Ask user for playlist name
+            string playlistName = Microsoft.VisualBasic.Interaction.InputBox(
+                "Enter playlist name:",
+                "Add to Playlist"
+            );
+
+            if (string.IsNullOrWhiteSpace(playlistName))
+                return;
+
+            // 3. Insert into PlaylistSongs table
+            using (var conn = Database.GetConnection())
+            {
+                conn.Open();
+
+                string sql = @"
+        INSERT OR IGNORE INTO PlaylistSongs (PlaylistId, SongPath)
+        VALUES (
+            (SELECT Id FROM Playlists WHERE Name = @playlist),
+            @path
+        )";
+
+                using (var cmd = new SQLiteCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@playlist", playlistName);
+                    cmd.Parameters.AddWithValue("@path", songPath);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
+            MessageBox.Show(
+                $"Song added to playlist \"{playlistName}\"",
+                "Playlist",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
+        }
+
+        private void removeSongButton_Click(object sender, EventArgs e)
+        {
+            if (listViewLibrary.SelectedIndices.Count == 0)
+            {
+                MessageBox.Show("Please select a song to delete.");
+                return;
+            }
+
+            int index = listViewLibrary.SelectedIndices[0];
+            string songPath = songs[index];
+
+            // Optional confirmation (you can remove this if you want)
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to delete this song from the library?\n\n" +
+                "It will be removed from all playlists.",
+                "Delete Song",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+
+            if (result != DialogResult.Yes)
+                return;
+
+            using (var conn = Database.GetConnection())
+            {
+                conn.Open();
+
+                string deleteSongSql = "DELETE FROM Songs WHERE FilePath = @path";
+                using (var cmd = new SQLiteCommand(deleteSongSql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@path", songPath);
+                    cmd.ExecuteNonQuery();
+                }
+
+                string deleteFromPlaylistsSql =
+                    "DELETE FROM PlaylistSongs WHERE SongPath = @path";
+                using (var cmd = new SQLiteCommand(deleteFromPlaylistsSql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@path", songPath);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
+            songs.RemoveAt(index);
+            favoriteStatus.RemoveAt(index);
+
+            if (currentSongIndex == index)
+            {
+                player.controls.stop();
+                currentSongIndex = -1;
+            }
+            else if (currentSongIndex > index)
+            {
+                currentSongIndex--;
+            }
+
+            RefreshLibraryList();
+        }
+
+        private void shuffleButton_Click(object sender, EventArgs e)
+        {
+            isShuffleOn = !isShuffleOn;
+            shuffleButton.BackColor = isShuffleOn
+                ? Color.FromArgb(30, 215, 96)
+                : Color.Transparent;
+        }
+
+        private void deleteVideoButton_Click(object sender, EventArgs e)
+        {
+            if (listViewVideoLibrary.SelectedIndices.Count == 0)
+            {
+                MessageBox.Show("Please select a video to delete.");
+                return;
+            }
+
+            int index = listViewVideoLibrary.SelectedIndices[0];
+            string videoPath = videos[index];
+
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to delete this video from the library?",
+                "Delete Video",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+
+            if (result != DialogResult.Yes)
+                return;
+
+            using (var conn = Database.GetConnection())
+            {
+                conn.Open();
+
+                string sql = "DELETE FROM Videos WHERE FilePath = @path";
+                using (var cmd = new SQLiteCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@path", videoPath);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
+            videos.RemoveAt(index);
+            videoFavoriteStatus.RemoveAt(index);
+
+            if (currentVideoPath == videoPath)
+            {
+                webViewVideo.Source = null;
+                currentVideoPath = null;
+            }
+
+            RefreshVideoLibraryList();
+        }
     }
 }
